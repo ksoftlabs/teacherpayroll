@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="teacherpayroll@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="teacherpayroll">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="ksoftlabs_wp"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="phpmyadmin"/>
+    <schema id="8" parent="1" name="soma_cube"/>
+    <schema id="9" parent="1" name="test"/>
+    <table id="10" parent="2" name="dinapala"/>
+    <table id="11" parent="2" name="gurusetha"/>
+    <table id="12" parent="2" name="rdb"/>
+    <table id="13" parent="2" name="smi"/>
+    <table id="14" parent="2" name="stc"/>
+    <table id="15" parent="2" name="teacher"/>
+    <table id="16" parent="2" name="welfare"/>
+    <column id="17" parent="10" name="teacher_t_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="10" name="dina_amount">
+      <Position>2</Position>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <key id="19" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>teacher_t_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="20" parent="10" name="fk_table1_teacher4">
+      <ColNames>teacher_t_id</ColNames>
+      <RefSchemaName>teacherpayroll</RefSchemaName>
+      <RefTableName>teacher</RefTableName>
+      <RefColNames>t_id</RefColNames>
+    </foreign-key>
+    <column id="21" parent="11" name="teacher_t_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="11" name="guru_amount">
+      <Position>2</Position>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <key id="23" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>teacher_t_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="24" parent="11" name="fk_table1_teacher2">
+      <ColNames>teacher_t_id</ColNames>
+      <RefSchemaName>teacherpayroll</RefSchemaName>
+      <RefTableName>teacher</RefTableName>
+      <RefColNames>t_id</RefColNames>
+    </foreign-key>
+    <column id="25" parent="12" name="teacher_t_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="12" name="rdb_amount">
+      <Position>2</Position>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <key id="27" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>teacher_t_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="28" parent="12" name="fk_table1_teacher3">
+      <ColNames>teacher_t_id</ColNames>
+      <RefSchemaName>teacherpayroll</RefSchemaName>
+      <RefTableName>teacher</RefTableName>
+      <RefColNames>t_id</RefColNames>
+    </foreign-key>
+    <column id="29" parent="13" name="teacher_t_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="13" name="smi_amount">
+      <Position>2</Position>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <key id="31" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>teacher_t_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="32" parent="13" name="fk_table1_teacher1">
+      <ColNames>teacher_t_id</ColNames>
+      <RefSchemaName>teacherpayroll</RefSchemaName>
+      <RefTableName>teacher</RefTableName>
+      <RefColNames>t_id</RefColNames>
+    </foreign-key>
+    <column id="33" parent="14" name="teacher_t_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="14" name="stc_amount">
+      <Position>2</Position>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <key id="35" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>teacher_t_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="36" parent="14" name="fk_stc_teacher1">
+      <ColNames>teacher_t_id</ColNames>
+      <RefSchemaName>teacherpayroll</RefSchemaName>
+      <RefTableName>teacher</RefTableName>
+      <RefColNames>t_id</RefColNames>
+    </foreign-key>
+    <column id="37" parent="15" name="t_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="15" name="t_name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="15" name="t_account">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="40" parent="15" name="t_gross">
+      <Position>4</Position>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <column id="41" parent="15" name="t_deduct">
+      <Position>5</Position>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <column id="42" parent="15" name="t_net">
+      <Position>6</Position>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <key id="43" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>t_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="44" parent="16" name="teacher_t_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="16" name="wel_amount">
+      <Position>2</Position>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <key id="46" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>teacher_t_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="47" parent="16" name="fk_welfare_teacher">
+      <ColNames>teacher_t_id</ColNames>
+      <RefSchemaName>teacherpayroll</RefSchemaName>
+      <RefTableName>teacher</RefTableName>
+      <RefColNames>t_id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

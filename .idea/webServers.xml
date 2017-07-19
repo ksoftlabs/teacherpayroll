@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6d433d50-5221-44ca-820e-58c586632dbc" name="XAMPP" url="http://localhost/teacherpayroll">
+        <fileTransfer port="0" mountedRoot="E:\xampp\htdocs" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
