@@ -19,9 +19,9 @@ if (mysqli_query($conn, $sql)) {
 
 echo "<html><body><table border='1'>";
 
-echo "<tr><td>ID</td><td>Name</td><td>Account Number</td><td>Gross Salary</td><td>Total Deduct</td><td>Net Salary</td>";
+echo "<tr><td>ID</td><td>Name</td><td>Account Number</td><td>Gross Salary</td><td>Total Deduct</td><td>Net Salary</td></tr>";
 
 while ($row = $result->fetch_array(MYSQLI_ASSOC)){
     echo "<tr><td>" . $row['t_id'] . "</td><td>" . $row['t_name'] . "</td><td>" . $row['t_account'] . "</td><td>" . $row['t_gross'] . "</td><td>" . $row['t_deduct'] . "</td><td>" . $row['t_net'] . "</td></tr>";
 }
-echo "</html></body></table>";
+echo "</table></body></html>";
