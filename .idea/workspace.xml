@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2ba4305-4bbc-40d9-8545-0817ed348317" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_dinapala.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_gurusetha.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_rdb.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_smi.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_stc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_welfare.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view_all.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edit_teacher.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view_all.php" afterPath="$PROJECT_DIR$/view_all.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view_teacher_list.php" afterPath="$PROJECT_DIR$/view_teacher_list.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,7 +37,7 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="teacherpayroll@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="teacherpayroll" type="e3449647:DbNodeDescriptor" />
-        <item name="gurusetha" type="e3449647:DbNodeDescriptor" />
+        <item name="teacher" type="e3449647:DbNodeDescriptor" />
       </path>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
@@ -58,94 +53,82 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="370" column="0" lean-forward="true" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
+            <state relative-caret-position="244">
+              <caret line="490" column="18" lean-forward="true" selection-start-line="490" selection-start-column="18" selection-end-line="490" selection-end-column="18" />
               <folding>
-                <marker date="1500561698349" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
-                <marker date="1500561698349" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
-                <marker date="1500561698349" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
-                <marker date="1500561698349" expanded="true" signature="1878:1914" ph="DELETE FROM " />
-                <marker date="1500561698349" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
-                <marker date="1500561698349" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
-                <marker date="1500561698349" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
-                <marker date="1500561698349" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
-                <marker date="1500561698349" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
-                <marker date="1500561698349" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
-                <marker date="1500561698349" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
-                <marker date="1500561698349" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
-                <marker date="1500561698349" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
-                <marker date="1500561698349" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
-                <marker date="1500561698349" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
-                <marker date="1500561698349" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
-                <marker date="1500561698349" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
-                <marker date="1500561698349" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
-                <marker date="1500561698349" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
-                <marker date="1500561698349" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
-                <marker date="1500561698349" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
-                <marker date="1500561698349" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
-                <marker date="1500561698349" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
-                <marker date="1500561698349" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
-                <marker date="1500561698349" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
+                <marker date="1500650196106" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
+                <marker date="1500650196106" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
+                <marker date="1500650196106" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
+                <marker date="1500650196106" expanded="true" signature="1878:1914" ph="DELETE FROM " />
+                <marker date="1500650196106" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
+                <marker date="1500650196106" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
+                <marker date="1500650196106" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
+                <marker date="1500650196106" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
+                <marker date="1500650196106" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
+                <marker date="1500650196106" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
+                <marker date="1500650196106" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
+                <marker date="1500650196106" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
+                <marker date="1500650196106" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
+                <marker date="1500650196106" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
+                <marker date="1500650196106" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
+                <marker date="1500650196106" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
+                <marker date="1500650196106" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
+                <marker date="1500650196106" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
+                <marker date="1500650196106" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
+                <marker date="1500650196106" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
+                <marker date="1500650196106" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
+                <marker date="1500650196106" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
+                <marker date="1500650196106" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
+                <marker date="1500650196106" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
+                <marker date="1500650196106" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
+                <marker date="1500650196106" expanded="true" signature="11935:12579" ph="SELECT teach... teacher" />
+                <marker date="1500650196106" expanded="true" signature="13680:14324" ph="SELECT COALE... teacher" />
+                <marker date="1500650196106" expanded="true" signature="15031:15102" ph="UPDATE teach... " />
+                <marker date="1500650196106" expanded="true" signature="15400:15435" ph="SELECT * FRO... teacher" />
+                <marker date="1500650196106" expanded="true" signature="16210:16236" ph="UPDATE teach... " />
+                <marker date="1500650196106" expanded="true" signature="16210:16255" ph="UPDATE teach... " />
+                <marker date="1500650196106" expanded="true" signature="16286:16335" ph="UPDATE teach... " />
+                <marker date="1500650196106" expanded="true" signature="16364:16409" ph="UPDATE teach... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view_all.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/view_all.php">
+      <file leaf-file-name="add_teacher.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/add_teacher.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="1615">
+              <caret line="95" column="7" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="95" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_gurusetha.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/add_gurusetha.php">
+      <file leaf-file-name="add_smi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/add_smi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state relative-caret-position="204">
+              <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_welfare.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/add_welfare.php">
+      <file leaf-file-name="edit_teacher.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/edit_teacher.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="142">
+              <caret line="70" column="47" lean-forward="true" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_stc.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/add_stc.php">
+      <file leaf-file-name="view_teacher_list.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view_teacher_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_dinapala.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/add_dinapala.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="73" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_rdb.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/add_rdb.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+            <state relative-caret-position="153">
+              <caret line="14" column="6" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="14" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -164,19 +147,28 @@
         <option value="$PROJECT_DIR$/add_teacher.php" />
         <option value="$PROJECT_DIR$/delete_teacher.php" />
         <option value="$PROJECT_DIR$/add_deduct.php" />
-        <option value="$PROJECT_DIR$/view_teacher_list.php" />
         <option value="$PROJECT_DIR$/add_smi.php" />
         <option value="$PROJECT_DIR$/add_dinapala.php" />
         <option value="$PROJECT_DIR$/add_gurusetha.php" />
         <option value="$PROJECT_DIR$/add_rdb.php" />
         <option value="$PROJECT_DIR$/add_welfare.php" />
         <option value="$PROJECT_DIR$/add_stc.php" />
+        <option value="$PROJECT_DIR$/view_all.php" />
+        <option value="$PROJECT_DIR$/view_teacher_list.php" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/edit_teacher.php" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -239,7 +231,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.add_welfare.php">
+  <component name="RunManager" selected="JavaScript Debug.edit_teacher.php">
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -306,25 +298,25 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration name="add_dinapala.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/teacherpayroll/add_dinapala.php" />
-    <configuration name="add_gurusetha.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/teacherpayroll/add_gurusetha.php" />
     <configuration name="add_rdb.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/teacherpayroll/add_rdb.php" />
-    <configuration name="add_stc.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/teacherpayroll/add_stc.php" />
-    <configuration name="add_welfare.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/teacherpayroll/add_welfare.php" />
+    <configuration name="add_teacher.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/teacherpayroll/add_teacher.php" />
+    <configuration name="edit_teacher.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/teacherpayroll/edit_teacher.php" />
+    <configuration name="view_all.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/teacherpayroll/view_all.php" />
+    <configuration name="view_teacher_list.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/teacherpayroll/view_teacher_list.php" />
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.add_dinapala.php" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.add_gurusetha.php" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.add_rdb.php" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.add_stc.php" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.add_welfare.php" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.add_rdb.php" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.view_all.php" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.add_teacher.php" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.edit_teacher.php" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.view_teacher_list.php" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.add_welfare.php" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.add_stc.php" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.edit_teacher.php" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.view_teacher_list.php" />
         <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.add_rdb.php" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.add_gurusetha.php" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.add_dinapala.php" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.add_teacher.php" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.view_all.php" />
       </list>
     </recent_temporary>
   </component>
@@ -347,33 +339,36 @@
       <workItem from="1500492870694" duration="1077000" />
       <workItem from="1500521813482" duration="73000" />
       <workItem from="1500548116062" duration="14172000" />
+      <workItem from="1500565037183" duration="4855000" />
+      <workItem from="1500641824358" duration="8539000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24490000" />
+    <option name="totallyTimeSpent" value="37884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1378" height="743" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25624081" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15198238" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.109004736" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39968404" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -393,31 +388,219 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1500561698349" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
-            <marker date="1500561698349" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
-            <marker date="1500561698349" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
-            <marker date="1500561698349" expanded="true" signature="1878:1914" ph="DELETE FROM " />
-            <marker date="1500561698349" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
-            <marker date="1500561698349" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
-            <marker date="1500561698349" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
-            <marker date="1500561698349" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
-            <marker date="1500561698349" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
-            <marker date="1500561698349" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
-            <marker date="1500561698349" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
-            <marker date="1500561698349" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
-            <marker date="1500561698349" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
-            <marker date="1500561698349" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
-            <marker date="1500561698349" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
-            <marker date="1500561698349" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
-            <marker date="1500561698349" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
+            <marker date="1500650196106" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
+            <marker date="1500650196106" expanded="true" signature="1878:1914" ph="DELETE FROM " />
+            <marker date="1500650196106" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
+            <marker date="1500650196106" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
+            <marker date="1500650196106" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
+            <marker date="1500650196106" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
+            <marker date="1500650196106" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
+            <marker date="1500650196106" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
+            <marker date="1500650196106" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
+            <marker date="1500650196106" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11935:12579" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="13680:14324" ph="SELECT COALE... teacher" />
+            <marker date="1500650196106" expanded="true" signature="15031:15102" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="15400:15435" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="16210:16236" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16210:16255" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16286:16335" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16364:16409" ph="UPDATE teach... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view_all.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_gurusetha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_welfare.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_stc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="5" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_dinapala.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="73" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_rdb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="70" column="9" lean-forward="false" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6205">
+          <caret line="370" column="0" lean-forward="false" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
+          <folding>
+            <marker date="1500650196106" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
+            <marker date="1500650196106" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
+            <marker date="1500650196106" expanded="true" signature="1878:1914" ph="DELETE FROM " />
+            <marker date="1500650196106" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
+            <marker date="1500650196106" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
+            <marker date="1500650196106" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
+            <marker date="1500650196106" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
+            <marker date="1500650196106" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
+            <marker date="1500650196106" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
+            <marker date="1500650196106" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
+            <marker date="1500650196106" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11935:12579" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="13680:14324" ph="SELECT COALE... teacher" />
+            <marker date="1500650196106" expanded="true" signature="15031:15102" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="15400:15435" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="16210:16236" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16210:16255" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16286:16335" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16364:16409" ph="UPDATE teach... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_gurusetha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_welfare.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_stc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_dinapala.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="73" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_rdb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view_all.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1500650196106" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
+            <marker date="1500650196106" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
+            <marker date="1500650196106" expanded="true" signature="1878:1914" ph="DELETE FROM " />
+            <marker date="1500650196106" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
+            <marker date="1500650196106" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
+            <marker date="1500650196106" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
+            <marker date="1500650196106" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
+            <marker date="1500650196106" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
+            <marker date="1500650196106" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
+            <marker date="1500650196106" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
+            <marker date="1500650196106" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11935:12579" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="13680:14324" ph="SELECT COALE... teacher" />
+            <marker date="1500650196106" expanded="true" signature="15031:15102" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="15400:15435" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="16210:16236" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16210:16255" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16286:16335" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16364:16409" ph="UPDATE teach... " />
           </folding>
         </state>
       </provider>
@@ -434,9 +617,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-          <folding>
-            <marker date="1500560730382" expanded="true" signature="125:160" ph="SELECT * FRO... teacher" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -453,31 +634,39 @@
         <state relative-caret-position="1394">
           <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
-            <marker date="1500561698349" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
-            <marker date="1500561698349" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
-            <marker date="1500561698349" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
-            <marker date="1500561698349" expanded="true" signature="1878:1914" ph="DELETE FROM " />
-            <marker date="1500561698349" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
-            <marker date="1500561698349" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
-            <marker date="1500561698349" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
-            <marker date="1500561698349" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
-            <marker date="1500561698349" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
-            <marker date="1500561698349" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
-            <marker date="1500561698349" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
-            <marker date="1500561698349" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
-            <marker date="1500561698349" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
-            <marker date="1500561698349" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
-            <marker date="1500561698349" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
-            <marker date="1500561698349" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
-            <marker date="1500561698349" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
+            <marker date="1500650196106" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
+            <marker date="1500650196106" expanded="true" signature="1878:1914" ph="DELETE FROM " />
+            <marker date="1500650196106" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
+            <marker date="1500650196106" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
+            <marker date="1500650196106" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
+            <marker date="1500650196106" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
+            <marker date="1500650196106" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
+            <marker date="1500650196106" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
+            <marker date="1500650196106" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
+            <marker date="1500650196106" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11935:12579" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="13680:14324" ph="SELECT COALE... teacher" />
+            <marker date="1500650196106" expanded="true" signature="15031:15102" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="15400:15435" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="16210:16236" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16210:16255" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16286:16335" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16364:16409" ph="UPDATE teach... " />
           </folding>
         </state>
       </provider>
@@ -494,9 +683,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-          <folding>
-            <marker date="1500560730382" expanded="true" signature="125:160" ph="SELECT * FRO... teacher" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -513,31 +700,39 @@
         <state relative-caret-position="1394">
           <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
-            <marker date="1500561698349" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
-            <marker date="1500561698349" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
-            <marker date="1500561698349" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
-            <marker date="1500561698349" expanded="true" signature="1878:1914" ph="DELETE FROM " />
-            <marker date="1500561698349" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
-            <marker date="1500561698349" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
-            <marker date="1500561698349" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
-            <marker date="1500561698349" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
-            <marker date="1500561698349" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
-            <marker date="1500561698349" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
-            <marker date="1500561698349" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
-            <marker date="1500561698349" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
-            <marker date="1500561698349" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
-            <marker date="1500561698349" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
-            <marker date="1500561698349" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
-            <marker date="1500561698349" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
-            <marker date="1500561698349" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
+            <marker date="1500650196106" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
+            <marker date="1500650196106" expanded="true" signature="1878:1914" ph="DELETE FROM " />
+            <marker date="1500650196106" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
+            <marker date="1500650196106" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
+            <marker date="1500650196106" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
+            <marker date="1500650196106" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
+            <marker date="1500650196106" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
+            <marker date="1500650196106" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
+            <marker date="1500650196106" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
+            <marker date="1500650196106" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11935:12579" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="13680:14324" ph="SELECT COALE... teacher" />
+            <marker date="1500650196106" expanded="true" signature="15031:15102" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="15400:15435" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="16210:16236" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16210:16255" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16286:16335" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16364:16409" ph="UPDATE teach... " />
           </folding>
         </state>
       </provider>
@@ -562,8 +757,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_teacher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <marker date="1500560730382" expanded="true" signature="125:160" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
+            <marker date="1500650196106" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
+            <marker date="1500650196106" expanded="true" signature="1878:1914" ph="DELETE FROM " />
+            <marker date="1500650196106" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
+            <marker date="1500650196106" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
+            <marker date="1500650196106" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
+            <marker date="1500650196106" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
+            <marker date="1500650196106" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
+            <marker date="1500650196106" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
+            <marker date="1500650196106" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
+            <marker date="1500650196106" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11935:12579" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="13680:14324" ph="SELECT COALE... teacher" />
+            <marker date="1500650196106" expanded="true" signature="15031:15102" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="15400:15435" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="16210:16236" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16210:16255" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16286:16335" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16364:16409" ph="UPDATE teach... " />
           </folding>
         </state>
       </provider>
@@ -581,73 +824,39 @@
         <state relative-caret-position="272">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <marker date="1500561698349" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
-            <marker date="1500561698349" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
-            <marker date="1500561698349" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
-            <marker date="1500561698349" expanded="true" signature="1878:1914" ph="DELETE FROM " />
-            <marker date="1500561698349" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
-            <marker date="1500561698349" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
-            <marker date="1500561698349" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
-            <marker date="1500561698349" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
-            <marker date="1500561698349" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
-            <marker date="1500561698349" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
-            <marker date="1500561698349" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
-            <marker date="1500561698349" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
-            <marker date="1500561698349" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
-            <marker date="1500561698349" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
-            <marker date="1500561698349" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
-            <marker date="1500561698349" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
-            <marker date="1500561698349" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add_teacher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <marker date="1500561698349" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
-            <marker date="1500561698349" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
-            <marker date="1500561698349" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
-            <marker date="1500561698349" expanded="true" signature="1878:1914" ph="DELETE FROM " />
-            <marker date="1500561698349" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
-            <marker date="1500561698349" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
-            <marker date="1500561698349" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
-            <marker date="1500561698349" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
-            <marker date="1500561698349" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
-            <marker date="1500561698349" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
-            <marker date="1500561698349" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
-            <marker date="1500561698349" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
-            <marker date="1500561698349" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
-            <marker date="1500561698349" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
-            <marker date="1500561698349" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
-            <marker date="1500561698349" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
-            <marker date="1500561698349" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
+            <marker date="1500650196106" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
+            <marker date="1500650196106" expanded="true" signature="1878:1914" ph="DELETE FROM " />
+            <marker date="1500650196106" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
+            <marker date="1500650196106" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
+            <marker date="1500650196106" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
+            <marker date="1500650196106" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
+            <marker date="1500650196106" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
+            <marker date="1500650196106" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
+            <marker date="1500650196106" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
+            <marker date="1500650196106" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11935:12579" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="13680:14324" ph="SELECT COALE... teacher" />
+            <marker date="1500650196106" expanded="true" signature="15031:15102" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="15400:15435" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="16210:16236" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16210:16255" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16286:16335" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16364:16409" ph="UPDATE teach... " />
           </folding>
         </state>
       </provider>
@@ -677,112 +886,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add_teacher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="19" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view_teacher_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="14" />
-          <folding>
-            <marker date="1500560730382" expanded="true" signature="125:160" ph="SELECT * FRO... teacher" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add_smi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="71" column="14" lean-forward="false" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add_gurusetha.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add_dinapala.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="73" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/add_rdb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add_stc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+        <state relative-caret-position="1105">
+          <caret line="70" column="9" lean-forward="false" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/add_welfare.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state relative-caret-position="782">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view_all.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_stc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="71" column="5" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_dinapala.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="73" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_gurusetha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_smi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view_teacher_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="6" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="14" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_teacher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="95" column="7" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="95" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="370" column="0" lean-forward="true" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
+        <state relative-caret-position="244">
+          <caret line="490" column="18" lean-forward="true" selection-start-line="490" selection-start-column="18" selection-end-line="490" selection-end-column="18" />
           <folding>
-            <marker date="1500561698349" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
-            <marker date="1500561698349" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
-            <marker date="1500561698349" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
-            <marker date="1500561698349" expanded="true" signature="1878:1914" ph="DELETE FROM " />
-            <marker date="1500561698349" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
-            <marker date="1500561698349" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
-            <marker date="1500561698349" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
-            <marker date="1500561698349" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
-            <marker date="1500561698349" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
-            <marker date="1500561698349" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
-            <marker date="1500561698349" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
-            <marker date="1500561698349" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
-            <marker date="1500561698349" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
-            <marker date="1500561698349" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
-            <marker date="1500561698349" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
-            <marker date="1500561698349" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
-            <marker date="1500561698349" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
-            <marker date="1500561698349" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
-            <marker date="1500561698349" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="544:584" ph="SELECT t_id teacher" />
+            <marker date="1500650196106" expanded="true" signature="1034:1074" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="1475:1569" ph="INSERT INTO teacher... " />
+            <marker date="1500650196106" expanded="true" signature="1878:1914" ph="DELETE FROM " />
+            <marker date="1500650196106" expanded="true" signature="2265:2310" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="2901:2946" ph="SELECT t_id,... teacher" />
+            <marker date="1500650196106" expanded="true" signature="3541:3608" ph="INSERT INTO smi... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3642" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="3628:3688" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4221:4295" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="4315:4382" ph="UPDATE smi S... " />
+            <marker date="1500650196106" expanded="true" signature="4921:4988" ph="INSERT INTO gurusetha... " />
+            <marker date="1500650196106" expanded="true" signature="5008:5068" ph="UPDATE gurus... " />
+            <marker date="1500650196106" expanded="true" signature="5596:5663" ph="INSERT INTO rdb... " />
+            <marker date="1500650196106" expanded="true" signature="5683:5743" ph="UPDATE rdb S... " />
+            <marker date="1500650196106" expanded="true" signature="6280:6353" ph="INSERT INTO dinapala... " />
+            <marker date="1500650196106" expanded="true" signature="6373:6439" ph="UPDATE dinap... " />
+            <marker date="1500650196106" expanded="true" signature="7011:7082" ph="INSERT INTO welfare... " />
+            <marker date="1500650196106" expanded="true" signature="7105:7169" ph="UPDATE welfa... " />
+            <marker date="1500650196106" expanded="true" signature="7774:7886" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="8462:8590" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9168:9299" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="9871:9983" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="10554:10666" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11241:11365" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="11935:12579" ph="SELECT teach... teacher" />
+            <marker date="1500650196106" expanded="true" signature="13680:14324" ph="SELECT COALE... teacher" />
+            <marker date="1500650196106" expanded="true" signature="15031:15102" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="15400:15435" ph="SELECT * FRO... teacher" />
+            <marker date="1500650196106" expanded="true" signature="16210:16236" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16210:16255" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16286:16335" ph="UPDATE teach... " />
+            <marker date="1500650196106" expanded="true" signature="16364:16409" ph="UPDATE teach... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view_all.php">
+    <entry file="file://$PROJECT_DIR$/edit_teacher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="142">
+          <caret line="70" column="47" lean-forward="true" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
           <folding />
         </state>
       </provider>

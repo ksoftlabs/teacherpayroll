@@ -387,3 +387,131 @@ function view_welfare(){
     echo "</table>";
 
 }
+
+function view_all(){
+    include "connect.php";
+    $sql="SELECT teacher.*,COALESCE(welfare.wel_amount,0) AS wel_amount ,COALESCE(smi.smi_amount,0) AS smi_amount ,COALESCE(gurusetha.guru_amount,0) AS guru_amount,COALESCE(rdb.rdb_amount,0) AS rdb_amount,COALESCE(stc.stc_amount,0) AS stc_amount,COALESCE(dinapala.dina_amount,0) AS dina_amount FROM teacher LEFT OUTER JOIN welfare ON teacher.t_id=welfare.teacher_t_id LEFT OUTER JOIN smi ON teacher.t_id=smi.teacher_t_id LEFT OUTER JOIN gurusetha ON teacher.t_id=gurusetha.teacher_t_id LEFT OUTER JOIN rdb ON teacher.t_id=rdb.teacher_t_id LEFT OUTER JOIN stc ON teacher.t_id=stc.teacher_t_id LEFT OUTER JOIN dinapala ON teacher.t_id=dinapala.teacher_t_id";
+
+    echo "<table border='1'>";
+
+    echo "<tr><td>ID</td><td>Name</td><td>Gross Salary</td><td>Welfare</td><td>SMI Bank</td><td>Gurusetha</td><td>RDB</td><td>S.T.C</td><td>Dinapala</td><td>Total Deduct</td><td>Net Salary</td></tr>";
+
+    if (mysqli_query($conn, $sql)) {
+        $result = $conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)){
+        echo "<tr><td>" . $row['t_id'] . "</td><td>" . $row['t_name'] . "</td><td>" . $row['t_gross'] . "</td><td>". $row['wel_amount'] . "</td><td>". $row['smi_amount'] . "</td><td>". $row['guru_amount'] . "</td><td>". $row['rdb_amount'] . "</td><td>". $row['stc_amount'] . "</td><td>". $row['dina_amount'] . "</td><td>". $row['t_deduct'] . "</td><td>". $row['t_net'] . "</td></tr>";
+    }
+
+    echo "</table>";
+}
+
+function calculate_deduct_and_net(){
+    include "connect.php";
+    $t_id="";
+    $total_deduct=$net_salary=$gross=$dinapala=$gurusetha=$rdb=$smi=$stc=$welfare=0;
+
+    $sql_get_data="SELECT teacher.*,COALESCE(welfare.wel_amount,0) AS wel_amount ,COALESCE(smi.smi_amount,0) AS smi_amount ,COALESCE(gurusetha.guru_amount,0) AS guru_amount,COALESCE(rdb.rdb_amount,0) AS rdb_amount,COALESCE(stc.stc_amount,0) AS stc_amount,COALESCE(dinapala.dina_amount,0) AS dina_amount FROM teacher LEFT OUTER JOIN welfare ON teacher.t_id=welfare.teacher_t_id LEFT OUTER JOIN smi ON teacher.t_id=smi.teacher_t_id LEFT OUTER JOIN gurusetha ON teacher.t_id=gurusetha.teacher_t_id LEFT OUTER JOIN rdb ON teacher.t_id=rdb.teacher_t_id LEFT OUTER JOIN stc ON teacher.t_id=stc.teacher_t_id LEFT OUTER JOIN dinapala ON teacher.t_id=dinapala.teacher_t_id";
+
+
+
+
+
+
+
+    if (mysqli_query($conn,$sql_get_data)) {
+        $result = $conn->query($sql_get_data);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql_get_data . "<br>" . mysqli_error($conn);
+    }
+
+  while ($row = $result->fetch_array(MYSQLI_ASSOC)){
+
+
+        $t_id=$row['t_id'];
+        $gross=$row['t_gross'];
+        $welfare=$row['wel_amount'];
+        $smi=$row['smi_amount'];
+        $gurusetha=$row['guru_amount'];
+        $rdb=$row['rdb_amount'];
+        $stc=$row['stc_amount'];
+        $dinapala=$row['dina_amount'];
+
+        $total_deduct=$welfare+$smi+$gurusetha+$rdb+$stc+$dinapala;
+        $net_salary=$gross-$total_deduct;
+
+
+      $sql_update="UPDATE teacher SET t_deduct=$total_deduct,t_net=$net_salary WHERE t_id=$t_id";
+
+        if (mysqli_query($conn, $sql_update)) {
+        } else {
+            #header('Location:create_user_failed.php');
+            echo "Error: " . $sql_get_data . "<br>" . mysqli_error($conn);
+        }
+
+    }
+
+
+}
+
+
+function view_teacher_list(){
+    require "connect.php";
+
+    $sql = "SELECT * FROM teacher ORDER BY t_id";
+
+    if (mysqli_query($conn, $sql)) {
+        $result = $conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    echo "<table border='1'>";
+    echo "<tr><td>ID</td><td>Name</td><td>Account Number</td><td>Gross Salary</td><td>Total Deduct</td><td>Net Salary</td></tr>";
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)){
+        echo "<tr><td>" . $row['t_id'] . "</td><td>" . $row['t_name'] . "</td><td>" . $row['t_account'] . "</td><td>" . $row['t_gross'] . "</td><td>" . $row['t_deduct'] . "</td><td>" . $row['t_net'] . "</td></tr>";
+    }
+    echo "</table>";
+}
+
+
+function edit_teacher($id,$name,$account,$gross){
+    include "connect.php";
+
+    $sql_update_name="UPDATE teacher SET t_name='$name' WHERE t_id=$id";
+    $sql_update_account="UPDATE teacher SET t_account=$account WHERE t_id=$id";
+    $sql_update_gross="UPDATE teacher SET t_gross=$gross WHERE t_id=$id";
+
+    if($name!=""){
+        if (mysqli_query($conn, $sql_update_name)) {
+            $result = $conn->query($sql_update_name);
+        } else {
+            #header('Location:create_user_failed.php');
+            echo "Error: " . $sql_update_name . "<br>" . mysqli_error($conn);
+        }
+    }
+
+    if($account!=""){
+        if (mysqli_query($conn, $sql_update_account)) {
+            $result = $conn->query($sql_update_account);
+        } else {
+            #header('Location:create_user_failed.php');
+            echo "Error: " . $sql_update_account . "<br>" . mysqli_error($conn);
+        }
+    }
+
+    if($gross!=""){
+        if (mysqli_query($conn, $sql_update_gross)) {
+            $result = $conn->query($sql_update_gross);
+        } else {
+            #header('Location:create_user_failed.php');
+            echo "Error: " . $sql_update_gross . "<br>" . mysqli_error($conn);
+        }
+    }
+}
