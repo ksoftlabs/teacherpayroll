@@ -515,3 +515,16 @@ function edit_teacher($id,$name,$account,$gross){
         }
     }
 }
+
+function edit_id($id,$newid){
+    include "connect.php";
+    $sql="UPDATE teacher SET t_id=$newid WHERE t_id=$id";
+    if (mysqli_query($conn, $sql)) {
+        $result = $conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+
+}

@@ -42,6 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if($errid==""and $errname=="" and $erraccount==""and $errgross==""){
         add_teacher($t_id,$t_name,$t_account,$t_gross);
+        $t_id=$t_name=$t_account=$t_gross="";
     }
 
 }
@@ -87,7 +88,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
 
-        <button class="btn waves-effect waves-light" type="submit" name="submit" value="Submit">Submit
+        <button class="btn waves-effect waves-light" type="submit" name="submit" value="Submit">Submit</button>
+
+        <div>
+            <?php
+            view_teacher_list();
+            ?>
+        </div>
     </form>
 
 

@@ -57,7 +57,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="name">Confirm ID</label>
             </div>
         </div>
-        <button class="btn waves-effect waves-light" type="submit" name="submit" value="Submit">Delete
+        <button class="btn waves-effect waves-light" type="submit" name="submit" value="Submit">Delete</button>
+
+        <div>
+            <?php
+            view_teacher_list();
+            ?>
+        </div>
     </form>
 
 

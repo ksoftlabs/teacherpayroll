@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="teacherpayroll@localhost">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.3">
     <root id="1"/>
     <schema id="2" parent="1" name="teacherpayroll">
       <Current>1</Current>
@@ -39,6 +39,8 @@
       <RefSchemaName>teacherpayroll</RefSchemaName>
       <RefTableName>teacher</RefTableName>
       <RefColNames>t_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="21" parent="11" name="teacher_t_id">
       <Position>1</Position>
@@ -59,6 +61,8 @@
       <RefSchemaName>teacherpayroll</RefSchemaName>
       <RefTableName>teacher</RefTableName>
       <RefColNames>t_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="25" parent="12" name="teacher_t_id">
       <Position>1</Position>
@@ -79,6 +83,8 @@
       <RefSchemaName>teacherpayroll</RefSchemaName>
       <RefTableName>teacher</RefTableName>
       <RefColNames>t_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="29" parent="13" name="teacher_t_id">
       <Position>1</Position>
@@ -99,6 +105,8 @@
       <RefSchemaName>teacherpayroll</RefSchemaName>
       <RefTableName>teacher</RefTableName>
       <RefColNames>t_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="33" parent="14" name="teacher_t_id">
       <Position>1</Position>
@@ -119,6 +127,8 @@
       <RefSchemaName>teacherpayroll</RefSchemaName>
       <RefTableName>teacher</RefTableName>
       <RefColNames>t_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="37" parent="15" name="t_id">
       <Position>1</Position>
@@ -146,30 +156,38 @@
       <Position>6</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <key id="43" parent="15" name="PRIMARY">
+    <column id="43" parent="15" name="t_cheque">
+      <Position>7</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="44" parent="15" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>t_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="44" parent="16" name="teacher_t_id">
+    <column id="45" parent="16" name="teacher_t_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="45" parent="16" name="wel_amount">
+    <column id="46" parent="16" name="wel_amount">
       <Position>2</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <key id="46" parent="16" name="PRIMARY">
+    <key id="47" parent="16" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>teacher_t_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="47" parent="16" name="fk_welfare_teacher">
+    <foreign-key id="48" parent="16" name="fk_welfare_teacher">
       <ColNames>teacher_t_id</ColNames>
       <RefSchemaName>teacherpayroll</RefSchemaName>
       <RefTableName>teacher</RefTableName>
       <RefColNames>t_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
   </database-model>
 </dataSource>
