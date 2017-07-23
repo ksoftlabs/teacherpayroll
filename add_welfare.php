@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="input-field col s12">
                 <?php
 
-                construct_id_select_welfare()
+                construct_id_select_checkbox()
                 ?>
             </div>
         </div>

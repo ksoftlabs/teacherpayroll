@@ -113,7 +113,7 @@ function construct_id_select(){
 
 
 /*Construct Checkboxes With IDs From Teacher Table*/
-function construct_id_select_welfare(){
+function construct_id_select_checkbox(){
     require "connect.php";
     $sql = "SELECT t_id,t_name FROM teacher ORDER BY t_id";
     $returnstring="";
@@ -127,6 +127,25 @@ function construct_id_select_welfare(){
 
     while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
         $returnstring = $returnstring . " <input type='checkbox' name='ids[]' value=". $row['t_id']." checked >". $row['t_id']." - ". $row['t_name']."<br>";
+    }
+    echo $returnstring;
+}
+
+/*Construct Checkboxes With IDs From Teacher Table*/
+function construct_id_select_checkbox_unchecked(){
+    require "connect.php";
+    $sql = "SELECT t_id,t_name FROM teacher ORDER BY t_id";
+    $returnstring="";
+
+    if (mysqli_query($conn, $sql)) {
+        $result = $conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+        $returnstring = $returnstring . " <input type='checkbox' name='ids[]' value=". $row['t_id'].">". $row['t_id']." - ". $row['t_name']."<br>";
     }
     echo $returnstring;
 }
@@ -526,5 +545,53 @@ function edit_id($id,$newid){
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
+
+}
+
+function add_cheque($ids){
+    require "connect.php";
+
+    $sql_reset = "UPDATE teacher SET t_cheque=0";
+
+    if (mysqli_query($conn, $sql_reset)) {
+        $result = $conn->query($sql_reset);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql_reset . "<br>" . mysqli_error($conn);
+    }
+
+    foreach($ids as $id){
+
+        $sql_update="UPDATE teacher SET t_cheque=1 WHERE t_id='$id'";
+
+        if (mysqli_query($conn, $sql_update)) {
+            $result = $conn->query($sql_update);
+        } else {
+            #header('Location:create_user_failed.php');
+            echo "Error: " . $sql_update . "<br>" . mysqli_error($conn);
+        }
+
+    }
+}
+
+
+function view_cheque_teachers(){
+
+    include "connect.php";
+    $sql="SELECT t_id,t_name,t_net FROM teacher WHERE t_cheque=1";
+
+    echo "<table border='1'>";
+    echo "<tr><td>ID</td><td>Name</td><td>Amount</td></tr>";
+
+    if (mysqli_query($conn, $sql)) {
+        $result = $conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)){
+        echo "<tr><td>" . $row['t_id'] . "</td><td>" . $row['t_name'] . "</td><td>" . $row['t_net'] . "</td></tr>";
+    }
+    echo "</table>";
 
 }
