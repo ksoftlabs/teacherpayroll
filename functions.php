@@ -13,6 +13,12 @@ function validate_text($data){
     }
 }
 
+function validate_text_and_numbers($data){
+    if (!preg_match("/^[a-zA-Z0-9 ]*$/",$data)) {
+        return  "Only letters and numbers allowed";
+    }
+}
+
 function validate_number($data){
     if (!preg_match("/^[0-9.]*$/",$data)) {
         return  "Only numbers allowed";
@@ -59,6 +65,28 @@ function validate_delete_id($data){
 
     if($result->num_rows==0){
         return "Teacher ID Does Not Exists";
+    }
+
+}
+
+function validate_username($data){
+    if (!preg_match("/^[a-zA-Z0-9]*$/",$data)) {
+        return  "Only letters and numbers allowed";
+    }
+
+    require "connect.php";
+
+    $sql="SELECT * FROM users WHERE user_username='$data'";
+
+    if (mysqli_query($conn, $sql)) {
+        $result=$conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    if($result->num_rows>0){
+        return "Username Already Exists";
     }
 
 }
@@ -146,6 +174,25 @@ function construct_id_select_checkbox_unchecked(){
 
     while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
         $returnstring = $returnstring . " <input type='checkbox' name='ids[]' value=". $row['t_id'].">". $row['t_id']." - ". $row['t_name']."<br>";
+    }
+    echo $returnstring;
+}
+
+/*Construct Checkboxes With IDs From User Table*/
+function construct_user_select_checkbox_unchecked(){
+    require "connect.php";
+    $sql = "SELECT user_id,user_name,user_username FROM users ORDER BY user_id";
+    $returnstring="";
+
+    if (mysqli_query($conn, $sql)) {
+        $result = $conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+        $returnstring = $returnstring . " <input type='checkbox' name='ids[]' value=". $row['user_id'].">". $row['user_username']." - ". $row['user_name']."<br>";
     }
     echo $returnstring;
 }
@@ -593,5 +640,41 @@ function view_cheque_teachers(){
         echo "<tr><td>" . $row['t_id'] . "</td><td>" . $row['t_name'] . "</td><td>" . $row['t_net'] . "</td></tr>";
     }
     echo "</table>";
+
+}
+
+function view_users(){
+
+    include "connect.php";
+    $sql="SELECT t_id,t_name,t_net FROM teacher WHERE t_cheque=1";
+
+    echo "<table border='1'>";
+    echo "<tr><td>ID</td><td>Name</td><td>Amount</td></tr>";
+
+    if (mysqli_query($conn, $sql)) {
+        $result = $conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)){
+        echo "<tr><td>" . $row['t_id'] . "</td><td>" . $row['t_name'] . "</td><td>" . $row['t_net'] . "</td></tr>";
+    }
+    echo "</table>";
+
+}
+
+function create_user($name,$u_username,$password){
+    include "connect.php";
+    $hash=password_hash($password,PASSWORD_DEFAULT);
+    $sql = "INSERT INTO users (user_name,user_username,user_pass) VALUES ('$name','$u_username','$hash')";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "User Added Successfully";
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
 
 }

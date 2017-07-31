@@ -21,22 +21,23 @@
     <table id="15" parent="2" name="smi"/>
     <table id="16" parent="2" name="stc"/>
     <table id="17" parent="2" name="teacher"/>
-    <table id="18" parent="2" name="welfare"/>
-    <column id="19" parent="10" name="teacher_t_id">
+    <table id="18" parent="2" name="users"/>
+    <table id="19" parent="2" name="welfare"/>
+    <column id="20" parent="10" name="teacher_t_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="20" parent="10" name="che_amount">
+    <column id="21" parent="10" name="che_amount">
       <Position>2</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <key id="21" parent="10" name="PRIMARY">
+    <key id="22" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>teacher_t_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="22" parent="10" name="fk_table1_teacher5">
+    <foreign-key id="23" parent="10" name="fk_table1_teacher5">
       <ColNames>teacher_t_id</ColNames>
       <RefSchemaName>teacherpayroll</RefSchemaName>
       <RefTableName>teacher</RefTableName>
@@ -44,21 +45,21 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="23" parent="11" name="teacher_t_id">
+    <column id="24" parent="11" name="teacher_t_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="24" parent="11" name="dina_amount">
+    <column id="25" parent="11" name="dina_amount">
       <Position>2</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <key id="25" parent="11" name="PRIMARY">
+    <key id="26" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>teacher_t_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="26" parent="11" name="fk_table1_teacher4">
+    <foreign-key id="27" parent="11" name="fk_table1_teacher4">
       <ColNames>teacher_t_id</ColNames>
       <RefSchemaName>teacherpayroll</RefSchemaName>
       <RefTableName>teacher</RefTableName>
@@ -66,21 +67,21 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="27" parent="12" name="teacher_t_id">
+    <column id="28" parent="12" name="teacher_t_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="28" parent="12" name="guru_amount">
+    <column id="29" parent="12" name="guru_amount">
       <Position>2</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <key id="29" parent="12" name="PRIMARY">
+    <key id="30" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>teacher_t_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="30" parent="12" name="fk_table1_teacher2">
+    <foreign-key id="31" parent="12" name="fk_table1_teacher2">
       <ColNames>teacher_t_id</ColNames>
       <RefSchemaName>teacherpayroll</RefSchemaName>
       <RefTableName>teacher</RefTableName>
@@ -88,71 +89,71 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="31" parent="13" name="misc_id">
+    <column id="32" parent="13" name="misc_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="32" parent="13" name="misc_pg1_total">
+    <column id="33" parent="13" name="misc_pg1_total">
       <Position>2</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="33" parent="13" name="misc_pg2_total">
+    <column id="34" parent="13" name="misc_pg2_total">
       <Position>3</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="34" parent="13" name="misc_welfare_total">
+    <column id="35" parent="13" name="misc_welfare_total">
       <Position>4</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="35" parent="13" name="misc_smi_total">
+    <column id="36" parent="13" name="misc_smi_total">
       <Position>5</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="36" parent="13" name="misc_guru_total">
+    <column id="37" parent="13" name="misc_guru_total">
       <Position>6</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="37" parent="13" name="misc_rdb_total">
+    <column id="38" parent="13" name="misc_rdb_total">
       <Position>7</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="38" parent="13" name="misc_stc_total">
+    <column id="39" parent="13" name="misc_stc_total">
       <Position>8</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="39" parent="13" name="misc_dina_total">
+    <column id="40" parent="13" name="misc_dina_total">
       <Position>9</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="40" parent="13" name="misc_boc_total">
+    <column id="41" parent="13" name="misc_boc_total">
       <Position>10</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="41" parent="13" name="misc_che_total">
+    <column id="42" parent="13" name="misc_che_total">
       <Position>11</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <key id="42" parent="13" name="PRIMARY">
+    <key id="43" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>misc_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="43" parent="14" name="teacher_t_id">
+    <column id="44" parent="14" name="teacher_t_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="44" parent="14" name="rdb_amount">
+    <column id="45" parent="14" name="rdb_amount">
       <Position>2</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <key id="45" parent="14" name="PRIMARY">
+    <key id="46" parent="14" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>teacher_t_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="46" parent="14" name="fk_table1_teacher3">
+    <foreign-key id="47" parent="14" name="fk_table1_teacher3">
       <ColNames>teacher_t_id</ColNames>
       <RefSchemaName>teacherpayroll</RefSchemaName>
       <RefTableName>teacher</RefTableName>
@@ -160,21 +161,21 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="47" parent="15" name="teacher_t_id">
+    <column id="48" parent="15" name="teacher_t_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="48" parent="15" name="smi_amount">
+    <column id="49" parent="15" name="smi_amount">
       <Position>2</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <key id="49" parent="15" name="PRIMARY">
+    <key id="50" parent="15" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>teacher_t_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="50" parent="15" name="fk_table1_teacher1">
+    <foreign-key id="51" parent="15" name="fk_table1_teacher1">
       <ColNames>teacher_t_id</ColNames>
       <RefSchemaName>teacherpayroll</RefSchemaName>
       <RefTableName>teacher</RefTableName>
@@ -182,21 +183,21 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="51" parent="16" name="teacher_t_id">
+    <column id="52" parent="16" name="teacher_t_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="52" parent="16" name="stc_amount">
+    <column id="53" parent="16" name="stc_amount">
       <Position>2</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <key id="53" parent="16" name="PRIMARY">
+    <key id="54" parent="16" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>teacher_t_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="54" parent="16" name="fk_stc_teacher1">
+    <foreign-key id="55" parent="16" name="fk_stc_teacher1">
       <ColNames>teacher_t_id</ColNames>
       <RefSchemaName>teacherpayroll</RefSchemaName>
       <RefTableName>teacher</RefTableName>
@@ -204,58 +205,98 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="55" parent="17" name="t_id">
+    <column id="56" parent="17" name="t_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="56" parent="17" name="t_name">
+    <column id="57" parent="17" name="t_name">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="57" parent="17" name="t_account">
+    <column id="58" parent="17" name="t_account">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="58" parent="17" name="t_gross">
+    <column id="59" parent="17" name="t_gross">
       <Position>4</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="59" parent="17" name="t_deduct">
+    <column id="60" parent="17" name="t_deduct">
       <Position>5</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="60" parent="17" name="t_net">
+    <column id="61" parent="17" name="t_net">
       <Position>6</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <column id="61" parent="17" name="t_cheque">
+    <column id="62" parent="17" name="t_cheque">
       <Position>7</Position>
       <DataType>tinyint(1)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <key id="62" parent="17" name="PRIMARY">
+    <key id="63" parent="17" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>t_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="63" parent="18" name="teacher_t_id">
+    <column id="64" parent="18" name="user_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="65" parent="18" name="user_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="18" name="user_username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="18" name="user_pass">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="18" name="user_approved">
+      <Position>5</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="69" parent="18" name="user_username_UNIQUE">
+      <ColNames>user_username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="70" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="71" parent="18" name="user_username_UNIQUE">
+      <ColNames>user_username</ColNames>
+      <UnderlyingIndexName>user_username_UNIQUE</UnderlyingIndexName>
+    </key>
+    <column id="72" parent="19" name="teacher_t_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="64" parent="18" name="wel_amount">
+    <column id="73" parent="19" name="wel_amount">
       <Position>2</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <key id="65" parent="18" name="PRIMARY">
+    <key id="74" parent="19" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>teacher_t_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="66" parent="18" name="fk_welfare_teacher">
+    <foreign-key id="75" parent="19" name="fk_welfare_teacher">
       <ColNames>teacher_t_id</ColNames>
       <RefSchemaName>teacherpayroll</RefSchemaName>
       <RefTableName>teacher</RefTableName>
