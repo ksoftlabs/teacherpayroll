@@ -621,6 +621,31 @@ function add_cheque($ids){
     }
 }
 
+function approve_users($ids){
+    require "connect.php";
+/*
+    $sql_reset = "UPDATE users SET user_approved=0";
+
+    if (mysqli_query($conn, $sql_reset)) {
+        $result = $conn->query($sql_reset);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql_reset . "<br>" . mysqli_error($conn);
+    }*/
+
+    foreach($ids as $id){
+
+        $sql_update="UPDATE users SET user_approved=1 WHERE user_id='$id'";
+
+        if (mysqli_query($conn, $sql_update)) {
+            $result = $conn->query($sql_update);
+        } else {
+            #header('Location:create_user_failed.php');
+            echo "Error: " . $sql_update . "<br>" . mysqli_error($conn);
+        }
+
+    }
+}
 
 function view_cheque_teachers(){
 
@@ -643,10 +668,10 @@ function view_cheque_teachers(){
 
 }
 
-function view_users(){
+function view_teachers(){
 
     include "connect.php";
-    $sql="SELECT t_id,t_name,t_net FROM teacher WHERE t_cheque=1";
+    $sql="SELECT t_id,t_name,t_net FROM teacher";
 
     echo "<table border='1'>";
     echo "<tr><td>ID</td><td>Name</td><td>Amount</td></tr>";
@@ -659,6 +684,27 @@ function view_users(){
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
         echo "<tr><td>" . $row['t_id'] . "</td><td>" . $row['t_name'] . "</td><td>" . $row['t_net'] . "</td></tr>";
+    }
+    echo "</table>";
+
+}
+
+function view_users(){
+
+    include "connect.php";
+    $sql="SELECT user_id,user_name,user_approved FROM users";
+
+    echo "<table border='1'>";
+    echo "<tr><td>ID</td><td>Name</td><td>Approved</td></tr>";
+
+    if (mysqli_query($conn, $sql)) {
+        $result = $conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)){
+        echo "<tr><td>" . $row['user_id'] . "</td><td>" . $row['user_name'] . "</td><td>" . $row['user_approved'] . "</td></tr>";
     }
     echo "</table>";
 
@@ -677,4 +723,16 @@ function create_user($name,$u_username,$password){
     }
 
 
+}
+
+function add_page_totals($page1,$page2){
+    require "connect.php";
+    $sql = "Update misc SET misc_pg1_total=$page1,misc_pg2_total=$page2";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "Page Totals Added Successfully";
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
 }

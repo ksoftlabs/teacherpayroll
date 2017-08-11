@@ -8,6 +8,18 @@
 require "connect.php";
 require "functions.php";
 
+$user_ids="";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (empty($_POST["ids"])) {
+
+    } else {
+        $user_ids=$_POST['ids'];
+        approve_users($user_ids);
+    }
+}
+
 ?>
 <html>
 <body>
