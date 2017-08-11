@@ -6,3 +6,4 @@
  * Time: 10:05 AM
  */
 
+require "functions.php";

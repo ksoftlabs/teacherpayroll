@@ -484,11 +484,6 @@ function calculate_deduct_and_net(){
     $sql_get_data="SELECT teacher.*,COALESCE(welfare.wel_amount,0) AS wel_amount ,COALESCE(smi.smi_amount,0) AS smi_amount ,COALESCE(gurusetha.guru_amount,0) AS guru_amount,COALESCE(rdb.rdb_amount,0) AS rdb_amount,COALESCE(stc.stc_amount,0) AS stc_amount,COALESCE(dinapala.dina_amount,0) AS dina_amount FROM teacher LEFT OUTER JOIN welfare ON teacher.t_id=welfare.teacher_t_id LEFT OUTER JOIN smi ON teacher.t_id=smi.teacher_t_id LEFT OUTER JOIN gurusetha ON teacher.t_id=gurusetha.teacher_t_id LEFT OUTER JOIN rdb ON teacher.t_id=rdb.teacher_t_id LEFT OUTER JOIN stc ON teacher.t_id=stc.teacher_t_id LEFT OUTER JOIN dinapala ON teacher.t_id=dinapala.teacher_t_id";
 
 
-
-
-
-
-
     if (mysqli_query($conn,$sql_get_data)) {
         $result = $conn->query($sql_get_data);
     } else {
@@ -735,4 +730,120 @@ function add_page_totals($page1,$page2){
         #header('Location:create_user_failed.php');
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
+}
+
+
+
+function calculate_welfare_total(){
+    require "connect.php";
+    $welfare_total=0;
+
+    $sql="SELECT wel_amount FROM welfare";
+
+    if (mysqli_query($conn, $sql)) {
+        $result = $conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)){
+        $welfare_total+=$row['wel_amount'];
+    }
+
+    return $welfare_total;
+}
+
+function calculate_smi_total(){
+    require "connect.php";
+    $smi_total=0;
+
+    $sql="SELECT smi_amount FROM smi";
+
+    if (mysqli_query($conn, $sql)) {
+        $result = $conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)){
+        $smi_total+=$row['smi_amount'];
+    }
+
+    return $smi_total;
+}
+
+function calculate_guru_total(){
+    require "connect.php";
+    $guru_total=0;
+
+    $sql="SELECT guru_amount FROM gurusetha";
+
+    if (mysqli_query($conn, $sql)) {
+        $result = $conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)){
+        $guru_total+=$row['guru_amount'];
+    }
+
+    return $guru_total;
+}
+
+function calculate_rdb_total(){
+    require "connect.php";
+    $rdb_total=0;
+
+    $sql="SELECT rdb_amount FROM rdb";
+
+    if (mysqli_query($conn, $sql)) {
+        $result = $conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)){
+        $rdb_total+=$row['rdb_amount'];
+    }
+
+    return $rdb_total;
+}
+
+function calculate_stc_total(){
+    require "connect.php";
+    $stc_total=0;
+
+    $sql="SELECT stc_amount FROM stc";
+
+    if (mysqli_query($conn, $sql)) {
+        $result = $conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)){
+        $stc_total+=$row['stc_amount'];
+    }
+
+    return $stc_total;
+}
+
+function calculate_dina_total(){
+    require "connect.php";
+    $dina_total=0;
+
+    $sql="SELECT dina_amount FROM dinapala";
+
+    if (mysqli_query($conn, $sql)) {
+        $result = $conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)){
+        $dina_total+=$row['dina_amount'];
+    }
+
+    return $dina_total;
 }
