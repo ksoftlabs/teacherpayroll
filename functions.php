@@ -847,3 +847,24 @@ function calculate_dina_total(){
 
     return $dina_total;
 }
+
+function calculate_boc_total(){
+    require "connect.php";
+    $cheque_total=0;
+
+    $sql="SELECT t_net FROM teacher WHERE t_cheque=0";
+
+    if (mysqli_query($conn, $sql)) {
+        $result = $conn->query($sql);
+    } else {
+        #header('Location:create_user_failed.php');
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)){
+        $cheque_total+=$row['t_net'];
+    }
+
+    return $cheque_total;
+}
+
+

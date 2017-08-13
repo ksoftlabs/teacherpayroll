@@ -7,3 +7,11 @@
  */
 
 require "functions.php";
+
+calculate_deduct_and_net();
+calculate_dina_total();
+calculate_guru_total();
+calculate_rdb_total();
+calculate_smi_total();
+calculate_stc_total();
+calculate_welfare_total();
