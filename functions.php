@@ -37,7 +37,7 @@ function validate_id($data){
     if (mysqli_query($conn, $sql)) {
         $result=$conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
@@ -59,7 +59,7 @@ function validate_delete_id($data){
     if (mysqli_query($conn, $sql)) {
         $result=$conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
@@ -81,7 +81,7 @@ function validate_username($data){
     if (mysqli_query($conn, $sql)) {
         $result=$conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
@@ -100,7 +100,7 @@ function add_teacher($id,$name,$account,$gross){
     if (mysqli_query($conn, $sql)) {
         echo "Teacher Added Successfully";
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 }
@@ -114,7 +114,7 @@ function delete_teacher($id){
     if (mysqli_query($conn, $sql)) {
         echo "Teacher Deleted Successfully";
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 }
@@ -129,7 +129,7 @@ function construct_id_select(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
@@ -149,7 +149,7 @@ function construct_id_select_checkbox(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
@@ -168,7 +168,7 @@ function construct_id_select_checkbox_unchecked(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
@@ -187,7 +187,7 @@ function construct_user_select_checkbox_unchecked(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
@@ -214,7 +214,7 @@ function add_smi($id,$amount){
         }
     }
     else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 }
@@ -234,7 +234,7 @@ function add_gurusetha($id,$amount){
         }
     }
     else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 }
@@ -254,7 +254,7 @@ function add_rdb($id,$amount){
         }
     }
     else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 }
@@ -275,7 +275,7 @@ function add_stc($id,$amount){
         }
     }
     else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 }
@@ -295,7 +295,7 @@ function add_dinapala($id,$amount){
         }
     }
     else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 }
@@ -318,7 +318,7 @@ function add_welfare($ids,$amount){
            }
        }
        else {
-           #header('Location:create_user_failed.php');
+
            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
        }
    }
@@ -339,7 +339,7 @@ function view_sim(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -360,7 +360,7 @@ function view_dinapala(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -381,7 +381,7 @@ function view_gurusetha(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -402,7 +402,7 @@ function view_rdb(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -423,7 +423,7 @@ function view_stc(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -444,7 +444,7 @@ function view_welfare(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -465,7 +465,7 @@ function view_all(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
@@ -487,7 +487,7 @@ function calculate_deduct_and_net(){
     if (mysqli_query($conn,$sql_get_data)) {
         $result = $conn->query($sql_get_data);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql_get_data . "<br>" . mysqli_error($conn);
     }
 
@@ -511,7 +511,7 @@ function calculate_deduct_and_net(){
 
         if (mysqli_query($conn, $sql_update)) {
         } else {
-            #header('Location:create_user_failed.php');
+
             echo "Error: " . $sql_get_data . "<br>" . mysqli_error($conn);
         }
 
@@ -529,7 +529,7 @@ function view_teacher_list(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
@@ -553,7 +553,7 @@ function edit_teacher($id,$name,$account,$gross){
         if (mysqli_query($conn, $sql_update_name)) {
             $result = $conn->query($sql_update_name);
         } else {
-            #header('Location:create_user_failed.php');
+
             echo "Error: " . $sql_update_name . "<br>" . mysqli_error($conn);
         }
     }
@@ -562,7 +562,7 @@ function edit_teacher($id,$name,$account,$gross){
         if (mysqli_query($conn, $sql_update_account)) {
             $result = $conn->query($sql_update_account);
         } else {
-            #header('Location:create_user_failed.php');
+
             echo "Error: " . $sql_update_account . "<br>" . mysqli_error($conn);
         }
     }
@@ -571,7 +571,7 @@ function edit_teacher($id,$name,$account,$gross){
         if (mysqli_query($conn, $sql_update_gross)) {
             $result = $conn->query($sql_update_gross);
         } else {
-            #header('Location:create_user_failed.php');
+
             echo "Error: " . $sql_update_gross . "<br>" . mysqli_error($conn);
         }
     }
@@ -583,7 +583,7 @@ function edit_id($id,$newid){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
@@ -598,7 +598,7 @@ function add_cheque($ids){
     if (mysqli_query($conn, $sql_reset)) {
         $result = $conn->query($sql_reset);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql_reset . "<br>" . mysqli_error($conn);
     }
 
@@ -609,7 +609,7 @@ function add_cheque($ids){
         if (mysqli_query($conn, $sql_update)) {
             $result = $conn->query($sql_update);
         } else {
-            #header('Location:create_user_failed.php');
+
             echo "Error: " . $sql_update . "<br>" . mysqli_error($conn);
         }
 
@@ -624,7 +624,7 @@ function approve_users($ids){
     if (mysqli_query($conn, $sql_reset)) {
         $result = $conn->query($sql_reset);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql_reset . "<br>" . mysqli_error($conn);
     }*/
 
@@ -635,7 +635,7 @@ function approve_users($ids){
         if (mysqli_query($conn, $sql_update)) {
             $result = $conn->query($sql_update);
         } else {
-            #header('Location:create_user_failed.php');
+
             echo "Error: " . $sql_update . "<br>" . mysqli_error($conn);
         }
 
@@ -653,7 +653,7 @@ function view_cheque_teachers(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -674,7 +674,7 @@ function view_teachers(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -695,7 +695,7 @@ function view_users(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -708,12 +708,12 @@ function view_users(){
 function create_user($name,$u_username,$password){
     include "connect.php";
     $hash=password_hash($password,PASSWORD_DEFAULT);
-    $sql = "INSERT INTO users (user_name,user_username,user_pass) VALUES ('$name','$u_username','$hash')";
+    $sql = "INSERT INTO users (user_name,user_username,user_pass) VALUES ('$name','$u_username','$password')";
 
     if (mysqli_query($conn, $sql)) {
         echo "User Added Successfully";
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
@@ -727,7 +727,7 @@ function add_page_totals($page1,$page2){
     if (mysqli_query($conn, $sql)) {
         echo "Page Totals Added Successfully";
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 }
@@ -743,7 +743,7 @@ function calculate_welfare_total(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -762,7 +762,7 @@ function calculate_smi_total(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -781,7 +781,7 @@ function calculate_guru_total(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -800,7 +800,7 @@ function calculate_rdb_total(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -819,7 +819,7 @@ function calculate_stc_total(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -838,7 +838,7 @@ function calculate_dina_total(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -857,7 +857,7 @@ function calculate_boc_total(){
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
     } else {
-        #header('Location:create_user_failed.php');
+
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -868,3 +868,23 @@ function calculate_boc_total(){
 }
 
 
+function user_login($u_user,$pass){
+    require "connect.php";
+    //$hashed=password_hash($pass,PASSWORD_DEFAULT);
+
+    $sql="SELECT * FROM users WHERE user_name='$u_user' AND user_pass='$pass' AND user_approved=1";
+
+    if (mysqli_query($conn, $sql)) {
+        $result=$conn->query($sql);
+    } else {
+
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    if($result->num_rows==0){
+        echo "Invalid Username/Password";
+    } else{
+        echo "User Logged In";
+    }
+
+}

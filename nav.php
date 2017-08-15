@@ -29,6 +29,8 @@
     <li>#####################################</li>
     <li><a href="edit_teacher.php">Edit Teacher</a> </li>
     <li><a href="edit_id.php">Edit ID</a> </li>
+    <li>#####################################</li>
+    <li><a href="login.php">Edit Teacher</a> </li>
 
 </ol>
 

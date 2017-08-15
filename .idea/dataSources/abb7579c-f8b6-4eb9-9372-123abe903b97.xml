@@ -269,34 +269,48 @@
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <index id="69" parent="18" name="user_username_UNIQUE">
+    <column id="69" parent="18" name="user_type">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <index id="70" parent="18" name="user_username_UNIQUE">
       <ColNames>user_username</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="70" parent="18" name="PRIMARY">
+    <index id="71" parent="18" name="user_id_UNIQUE">
+      <ColNames>user_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="72" parent="18" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="71" parent="18" name="user_username_UNIQUE">
+    <key id="73" parent="18" name="user_id_UNIQUE">
+      <ColNames>user_id</ColNames>
+      <UnderlyingIndexName>user_id_UNIQUE</UnderlyingIndexName>
+    </key>
+    <key id="74" parent="18" name="user_username_UNIQUE">
       <ColNames>user_username</ColNames>
       <UnderlyingIndexName>user_username_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="72" parent="19" name="teacher_t_id">
+    <column id="75" parent="19" name="teacher_t_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="73" parent="19" name="wel_amount">
+    <column id="76" parent="19" name="wel_amount">
       <Position>2</Position>
       <DataType>decimal(10,2)|0</DataType>
     </column>
-    <key id="74" parent="19" name="PRIMARY">
+    <key id="77" parent="19" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>teacher_t_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="75" parent="19" name="fk_welfare_teacher">
+    <foreign-key id="78" parent="19" name="fk_welfare_teacher">
       <ColNames>teacher_t_id</ColNames>
       <RefSchemaName>teacherpayroll</RefSchemaName>
       <RefTableName>teacher</RefTableName>
