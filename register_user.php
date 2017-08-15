@@ -57,9 +57,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="container">
     <div class="row"><h2>User Registraion</h2></div>
 
-    <form  class="col s12" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form  class="column1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field column1">
                 <input type="text" name="name" id="name" value="<?php echo $u_name;?>">
                 <label for="name">Name</label>
                 <span><?php echo $errname ?></span>
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field column1">
                 <input type="text" id="username" name="username" value="<?php echo $u_username;?>">
                 <label for="username">User Name</label>
                 <span><?php echo $errusername ?></span>
@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field column1">
                 <input type="password" id="pass1" name="pass1" value="<?php echo $u_pass1;?>">
                 <label for="pass1">Password</label>
                 <span><?php echo $errpass1 ;?></span>
@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field column1">
                 <input type="password" id="pass2" name="pass2" value="<?php echo $u_pass2;?>">
                 <label for="pass2">Confirm Password</label>
                 <span><?php echo $errpass2 ;?></span>

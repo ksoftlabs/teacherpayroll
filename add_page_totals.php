@@ -42,9 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="container">
     <div class="row"><h2>Add Page Totals</h2></div>
 
-    <form  class="col s12" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form  class="column1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field column1">
                 <input id="page1" name="page1" type="text" value="<?php echo $page1;?>">
                 <label for="page1">Page 1 Total</label>
                 <span><?php echo $errpage1 ?></span>
@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field column1">
                 <input type="text" name="page2" id="page2" value="<?php echo $page2;?>">
                 <label for="page2">Page 2 Total</label>
                 <span><?php echo $errpage2 ?></span>

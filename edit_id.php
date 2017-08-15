@@ -40,9 +40,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="container">
     <div class="row"><h2>Edit A Teacher ID</h2></div>
 
-    <form  class="col s12" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form  class="column1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field column1">
                 <label for="id">Select ID</label>
                 <select name="id" id="id">
                     <?php
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field column1">
                 <input type="text" name="new_id" id="new_id" value="">
                 <label for="email">New ID</label>
                 <span><?php echo $errnewid ?></span>

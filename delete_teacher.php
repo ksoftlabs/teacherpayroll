@@ -8,6 +8,7 @@
 
 require "connect.php";
 require "functions.php";
+include "header.php";
 
 $t_id1=$t_id2="";
 $errid="";
@@ -37,22 +38,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<html>
-
-<body>
-<div class="container">
+<div class="column6">
     <div class="row"><h2>Delete A Teacher</h2></div>
 
-    <form  class="col s12" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form  class="column1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field column1">
                 <input id="id1" name="id1" type="text" value="<?php echo $t_id1;?>">
                 <label for="name">ID</label>
                 <span><?php echo $errid ?></span>
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field column1">
                 <input id="id2" name="id2" type="text" value="<?php echo $t_id2;?>">
                 <label for="name">Confirm ID</label>
             </div>

@@ -43,10 +43,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="container">
     <div class="row"><h2>User Login</h2></div>
 
-    <form  class="col s12" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form  class="column1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field column1">
                 <input type="text" id="username" name="username" value="<?php echo $u_username;?>">
                 <label for="username">User Name</label>
                 <span><?php echo $errusername ?></span>
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field column1">
                 <input type="password" id="pass" name="pass" value="<?php echo $u_pass;?>">
                 <label for="pass1">Password</label>
                 <span><?php echo $errpass ;?></span>

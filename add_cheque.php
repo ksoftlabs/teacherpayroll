@@ -7,7 +7,7 @@
  */
 require "connect.php";
 require "functions.php";
-
+include "header.php";
 $t_ids="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -20,22 +20,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-?>
-<html>
-<body>
 
+?>
+
+<div class="column6">
 <div>
     <h2>Enter Pay By Cheques</h2>
 </div>
 
 <div>
-    <form  class="col s12" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form  class="column1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
         <div><hr></div>
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field column1">
                 <?php
-
                 construct_id_select_checkbox_unchecked();
                 ?>
             </div>
@@ -49,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     view_cheque_teachers();
     ?>
 </div>
-
+</div>
 
 </body>
 </html>

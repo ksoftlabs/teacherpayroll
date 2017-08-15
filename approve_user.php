@@ -29,11 +29,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 <div>
-    <form  class="col s12" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form  class="column1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
         <div><hr></div>
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field column1">
                 <?php
 
                 construct_user_select_checkbox_unchecked();
