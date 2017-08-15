@@ -7,3 +7,8 @@
  */
 session_start();
 
+if(!isset($_SESSION['userid'])){
+    echo"<html><head></head><body>Access Denied. Click <a href='login.php'>here</a> to log in</body></html>";
+    die();
+}
+?>

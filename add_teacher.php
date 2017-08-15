@@ -7,6 +7,7 @@
  */
 require "connect.php";
 require "functions.php";
+require "access_control.php";
 
 $t_id=$t_name=$t_account=$t_gross="";
 $errid=$errname=$erraccount=$errgross="";

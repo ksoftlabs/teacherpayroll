@@ -885,6 +885,10 @@ function user_login($u_user,$pass){
         echo "Invalid Username/Password";
     } else{
         echo "User Logged In";
+        $row = $result->fetch_array(MYSQLI_ASSOC);
+        session_start();
+        $_SESSION['userid']=$row['user_id'];
+        $_SESSION['usertype']=$row['user_type'];
     }
 
 }
