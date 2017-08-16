@@ -35,8 +35,13 @@
     <li><a href="view_all.php">View All</a></li>
     <li><a href="view_teacher_list.php">View Teacher List</a></li>
     <li><a href="view_totals.php">View Totals</a></li>
-    <li><a class="label">Admin</a></li>
-    <li><a href="approve_user.php">Approve User</a></li>
+    <?php
+    if($_SESSION['usertype']==1){
+        echo "<li><a class='label'>Admin</a></li>";
+        echo "<li><a href='approve_user.php'>Approve User</a></li>";
+    };
+    ?>
+    <li><a href="logout.php">Log Out</a></li>
 </ul>
 </div>
 
