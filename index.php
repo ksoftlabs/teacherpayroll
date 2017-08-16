@@ -10,6 +10,7 @@ include "header.php";
 
 ?>
 <div class="row">
+    <div class="text-center vertical-center"><h2>Welcome to Easy Pay <br> Teacher Payroll System</h2><p>Group 7a</p></div>
 
 </div>
 <?php
