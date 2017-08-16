@@ -590,31 +590,6 @@ function edit_id($id,$newid){
 
 }
 
-function add_cheque($ids){
-    require "connect.php";
-
-    $sql_reset = "UPDATE teacher SET t_cheque=0";
-
-    if (mysqli_query($conn, $sql_reset)) {
-        $result = $conn->query($sql_reset);
-    } else {
-
-        echo "Error: " . $sql_reset . "<br>" . mysqli_error($conn);
-    }
-
-    foreach($ids as $id){
-
-        $sql_update="UPDATE teacher SET t_cheque=1 WHERE t_id='$id'";
-
-        if (mysqli_query($conn, $sql_update)) {
-            $result = $conn->query($sql_update);
-        } else {
-
-            echo "Error: " . $sql_update . "<br>" . mysqli_error($conn);
-        }
-
-    }
-}
 
 function approve_users($ids){
     require "connect.php";
@@ -642,26 +617,7 @@ function approve_users($ids){
     }
 }
 
-function view_cheque_teachers(){
 
-    include "connect.php";
-    $sql="SELECT t_id,t_name,t_net FROM teacher WHERE t_cheque=1";
-
-    echo "<table border='1'>";
-    echo "<tr><td>ID</td><td>Name</td><td>Amount</td></tr>";
-
-    if (mysqli_query($conn, $sql)) {
-        $result = $conn->query($sql);
-    } else {
-
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
-    while ($row = $result->fetch_array(MYSQLI_ASSOC)){
-        echo "<tr><td>" . $row['t_id'] . "</td><td>" . $row['t_name'] . "</td><td>" . $row['t_net'] . "</td></tr>";
-    }
-    echo "</table>";
-
-}
 
 function view_teachers(){
 
@@ -718,18 +674,6 @@ function create_user($name,$u_username,$password){
     }
 
 
-}
-
-function add_page_totals($page1,$page2){
-    require "connect.php";
-    $sql = "Update misc SET misc_pg1_total=$page1,misc_pg2_total=$page2";
-
-    if (mysqli_query($conn, $sql)) {
-        echo "Page Totals Added Successfully";
-    } else {
-
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
 }
 
 
@@ -850,9 +794,9 @@ function calculate_dina_total(){
 
 function calculate_boc_total(){
     require "connect.php";
-    $cheque_total=0;
+    $boc_total=0;
 
-    $sql="SELECT t_net FROM teacher WHERE t_cheque=0";
+    $sql="SELECT t_net FROM teacher";
 
     if (mysqli_query($conn, $sql)) {
         $result = $conn->query($sql);
@@ -861,10 +805,10 @@ function calculate_boc_total(){
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
-        $cheque_total+=$row['t_net'];
+        $boc_total+=$row['t_net'];
     }
 
-    return $cheque_total;
+    return $boc_total;
 }
 
 
