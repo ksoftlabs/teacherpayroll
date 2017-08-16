@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <form  class="column2center text-center" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div class="row">
-            <div class="input-field column1">
+            <div class="column1">
                 <label for="name">Name</label>
                 <input class="display-inline" type="text" name="name" id="name" value="<?php echo $u_name;?>">
 
@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="row">
-            <div class="input-field column1">
+            <div class="column1">
                 <label for="username">User Name</label>
                 <input class="display-inline" type="text" id="username" name="username" value="<?php echo $u_username;?>">
 
@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="row">
-            <div class="input-field column1">
+            <div class="column1">
                 <label for="pass1">Password</label>
                 <input type="password" id="pass1" name="pass1" value="<?php echo $u_pass1;?>">
 
@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="row">
-            <div class="input-field column1">
+            <div class="column1">
                 <label for="pass2">Confirm Password</label>
                 <input type="password" id="pass2" name="pass2" value="<?php echo $u_pass2;?>">
 

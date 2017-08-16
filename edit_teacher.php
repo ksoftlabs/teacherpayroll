@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="row">
-            <div class="input-field column1">
+            <div class="column1">
                 <label for="email">Name</label>
                 <input type="text" name="name" id="name" value="">
 
@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="row">
-            <div class="input-field column1">
+            <div class="column1">
                 <label for="contact">Account Number</label>
                 <input type="text" id="account" name="account" value="">
 
@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="row">
-            <div class="input-field column1">
+            <div class="column1">
                 <label for="title">Gross Salary</label>
                 <input type="text" id="gross" name="gross" value="">
 

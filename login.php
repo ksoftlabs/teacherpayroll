@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
         <div class="row">
-            <div class="input-field column1">
+            <div class="column1">
                 <label for="username">User Name</label>
                 <input class="display-inline" type="text" id="username" name="username" value="<?php echo $u_username;?>">
 
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="row">
-            <div class="input-field column1">
+            <div class="column1">
                 <label for="pass1">Password</label>
                 <input type="password" id="pass" name="pass" value="<?php echo $u_pass;?>">
 

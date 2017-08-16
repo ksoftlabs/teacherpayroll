@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div>
     <form  class="column1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div class="row">
-            <div class="input-field column1">
+            <div class="column1">
                 <label for="id">Select ID</label>
                 <select name="id" id="id">
                     <?php
@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         <div class="row">
-            <div class="input-field column1">
+            <div class="column1">
                 <label for="title">Deduct Amount</label>
                 <input type="text" id="deduct" name="deduct" value="">
 

@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div><hr></div>
         <div class="row">
-            <div class="input-field column1">
+            <div class="column1">
                 <?php
 
                 construct_user_select_checkbox_unchecked();
