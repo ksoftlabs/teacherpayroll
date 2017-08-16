@@ -458,7 +458,7 @@ function view_all(){
     include "connect.php";
     $sql="SELECT teacher.*,COALESCE(welfare.wel_amount,0) AS wel_amount ,COALESCE(smi.smi_amount,0) AS smi_amount ,COALESCE(gurusetha.guru_amount,0) AS guru_amount,COALESCE(rdb.rdb_amount,0) AS rdb_amount,COALESCE(stc.stc_amount,0) AS stc_amount,COALESCE(dinapala.dina_amount,0) AS dina_amount FROM teacher LEFT OUTER JOIN welfare ON teacher.t_id=welfare.teacher_t_id LEFT OUTER JOIN smi ON teacher.t_id=smi.teacher_t_id LEFT OUTER JOIN gurusetha ON teacher.t_id=gurusetha.teacher_t_id LEFT OUTER JOIN rdb ON teacher.t_id=rdb.teacher_t_id LEFT OUTER JOIN stc ON teacher.t_id=stc.teacher_t_id LEFT OUTER JOIN dinapala ON teacher.t_id=dinapala.teacher_t_id";
 
-    echo "<table border='1'>";
+    echo "<table class='center' border='1'>";
 
     echo "<tr><td>ID</td><td>Name</td><td>Gross Salary</td><td>Welfare</td><td>SMI Bank</td><td>Gurusetha</td><td>RDB</td><td>S.T.C</td><td>Dinapala</td><td>Total Deduct</td><td>Net Salary</td></tr>";
 
@@ -533,7 +533,7 @@ function view_teacher_list(){
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
-    echo "<table border='1'>";
+    echo "<table class='center' border='1'>";
     echo "<tr><td>ID</td><td>Name</td><td>Account Number</td><td>Gross Salary</td><td>Total Deduct</td><td>Net Salary</td></tr>";
     while ($row = $result->fetch_array(MYSQLI_ASSOC)){
         echo "<tr><td>" . $row['t_id'] . "</td><td>" . $row['t_name'] . "</td><td>" . $row['t_account'] . "</td><td>" . $row['t_gross'] . "</td><td>" . $row['t_deduct'] . "</td><td>" . $row['t_net'] . "</td></tr>";

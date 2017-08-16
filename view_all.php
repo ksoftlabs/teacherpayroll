@@ -8,12 +8,16 @@
 include "functions.php";
 include "access_control.php";
 include "header.php";
-
-
-echo "<div class='column6'>";
+?>
+<div class='column6'>
+    <div>
+        <h2>Pay Sheet</h2>
+    </div>
+<?php
 calculate_deduct_and_net();
 view_all();
 ?>
 </div>
-</body>
-</html>
+<?php
+include "footer.php";
+?>

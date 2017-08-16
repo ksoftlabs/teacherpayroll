@@ -10,10 +10,15 @@ include "functions.php";
 include "access_control.php";
 include "header.php";
 
-
-echo "<div class='column6'>";
+?>
+<div class='column6'>
+    <div>
+        <h2>List of Teachers</h2>
+    </div>
+    <?php
 view_teacher_list();
 ?>
 </div>
-    </body>
-</html>
+<?php
+include "footer.php";
+?>

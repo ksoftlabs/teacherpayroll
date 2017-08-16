@@ -65,11 +65,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
 
-        <button class="btn waves-effect waves-light" type="submit" name="submit" value="Submit">Submit</button>
+        <button class="btn" type="submit" name="submit" value="Submit">Submit</button>
     </form>
     </div>
     </div>
+    <div>
+        <p class="text-center">Click <a href='register.php'>here</a> to register.</p>
+    </div>
 
 </div>
-</body>
-</html>
+<?php
+include "footer.php";
+?>

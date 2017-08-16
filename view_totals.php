@@ -9,15 +9,23 @@
 require "functions.php";
 include "access_control.php";
 include "header.php";
+
 echo "<div class='column6'>";
 calculate_deduct_and_net();
-calculate_dina_total();
-calculate_guru_total();
-calculate_rdb_total();
-calculate_smi_total();
-calculate_stc_total();
-calculate_welfare_total();
+echo "<p>Total Deduction for Dinapala : Rs ";
+echo calculate_dina_total();
+echo "<p>Total Deduction for Gurusetha : Rs ";
+echo calculate_guru_total();
+echo "<p>Total Deduction for RDB : Rs ";
+echo calculate_rdb_total();
+echo "<p>Total Deduction for SMI : Rs ";
+echo calculate_smi_total();
+echo "<p>Total Deduction for STC : Rs ";
+echo calculate_stc_total();
+echo "<p>Total Deduction for Welfare : Rs ";
+echo calculate_welfare_total();
 ?>
 </div>
-</body>
-</html>
+<?php
+include "footer.php";
+?>

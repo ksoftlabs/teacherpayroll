@@ -66,29 +66,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="row">
             <div class="input-field column1">
-                <input type="text" name="name" id="name" value="">
                 <label for="email">Name</label>
+                <input type="text" name="name" id="name" value="">
+
                 <span><?php echo $errname ?></span>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field column1">
-                <input type="text" id="account" name="account" value="">
                 <label for="contact">Account Number</label>
+                <input type="text" id="account" name="account" value="">
+
                 <span><?php echo $erraccount ?></span>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field column1">
-                <input type="text" id="gross" name="gross" value="">
                 <label for="title">Gross Salary</label>
+                <input type="text" id="gross" name="gross" value="">
+
                 <span><?php echo $errgross ;?></span>
             </div>
         </div>
 
-        <button class="btn waves-effect waves-light" type="submit" name="submit" value="Submit">Submit</button>
+        <button class="btn" type="submit" name="submit" value="Submit">Submit</button>
 
     </form>
 
@@ -100,5 +103,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 </div>
-</body>
-</html>
+<?php
+include "footer.php";
+?>

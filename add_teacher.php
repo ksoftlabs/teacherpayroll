@@ -57,37 +57,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form  class="column1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div class="row">
             <div class="input-field column1">
-                <input id="id" name="id" type="text" value="<?php echo $t_id;?>">
                 <label for="name">ID</label>
+                <input id="id" name="id" type="text" value="<?php echo $t_id;?>">
+
                 <span><?php echo $errid ?></span>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field column1">
-                <input type="text" name="name" id="name" value="<?php echo $t_name;?>">
+
                 <label for="email">Name</label>
+                <input type="text" name="name" id="name" value="<?php echo $t_name;?>">
                 <span><?php echo $errname ?></span>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field column1">
-                <input type="text" id="account" name="account" value="<?php echo $t_account;?>">
                 <label for="contact">Account Number</label>
+                <input type="text" id="account" name="account" value="<?php echo $t_account;?>">
+
                 <span><?php echo $erraccount ?></span>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field column1">
-                <input type="text" id="gross" name="gross" value="<?php echo $t_gross;?>">
+
                 <label for="title">Gross Salary</label>
+                <input type="text" id="gross" name="gross" value="<?php echo $t_gross;?>">
                 <span><?php echo $errgross ;?></span>
             </div>
         </div>
 
-        <button class="btn waves-effect waves-light" type="submit" name="submit" value="Submit">Submit</button>
+        <button class="btn" type="submit" name="submit" value="Submit">Submit</button>
 
         <div>
             <?php
@@ -98,6 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 </div>
-</body>
-</html>
+<?php
+include "footer.php";
+?>
 

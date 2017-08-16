@@ -53,13 +53,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="row">
             <div class="input-field column1">
-                <input type="text" name="new_id" id="new_id" value="">
                 <label for="email">New ID</label>
+                <input type="text" name="new_id" id="new_id" value="">
+
                 <span><?php echo $errnewid ?></span>
             </div>
         </div>
 
-        <button class="btn waves-effect waves-light" type="submit" name="submit" value="Submit">Submit</button>
+        <button class="btn" type="submit" name="submit" value="Submit">Submit</button>
 
     </form>
 
@@ -71,5 +72,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 </div>
-</body>
-</html>
+<?php
+include "footer.php";
+?>

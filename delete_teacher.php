@@ -45,18 +45,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form  class="column1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div class="row">
             <div class="input-field column1">
-                <input id="id1" name="id1" type="text" value="<?php echo $t_id1;?>">
                 <label for="name">ID</label>
+                <input id="id1" name="id1" type="text" value="<?php echo $t_id1;?>">
+
                 <span><?php echo $errid ?></span>
             </div>
         </div>
         <div class="row">
             <div class="input-field column1">
-                <input id="id2" name="id2" type="text" value="<?php echo $t_id2;?>">
                 <label for="name">Confirm ID</label>
+                <input id="id2" name="id2" type="text" value="<?php echo $t_id2;?>">
+
             </div>
         </div>
-        <button class="btn waves-effect waves-light" type="submit" name="submit" value="Submit">Delete</button>
+        <button class="btn" type="submit" name="submit" value="Submit">Delete</button>
 
         <div>
             <?php
@@ -67,6 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 </div>
-</body>
-</html>
+<?php
+include "footer.php";
+?>
 

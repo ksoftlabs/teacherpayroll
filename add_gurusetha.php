@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
 
-        <button class="btn waves-effect waves-light" type="submit" name="submit" value="Submit">Submit
+        <button class="btn" type="submit" name="submit" value="Submit">Submit
     </form>
 </div>
 
@@ -78,5 +78,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 </div>
-</body>
-</html>
+<?php
+include "footer.php";
+?>
