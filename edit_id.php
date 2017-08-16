@@ -8,6 +8,8 @@
 
 require "connect.php";
 require "functions.php";
+include "access_control.php";
+include "header.php";
 
 $t_id=$t_new_id="";
 $errnewid="";
@@ -34,10 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-<html>
-
-<body>
-<div class="container">
+<div class="column6">
     <div class="row"><h2>Edit A Teacher ID</h2></div>
 
     <form  class="column1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">

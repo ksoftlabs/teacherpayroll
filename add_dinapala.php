@@ -8,6 +8,10 @@
 
 require "connect.php";
 require "functions.php";
+include "access_control.php";
+include "header.php";
+
+
 
 
 $t_id=$t_deduct="";
@@ -33,8 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
-<html>
-<body>
+
+<div class="column6">
 
 <div>
     <h2>Enter Dinapala Deductions</h2>
@@ -73,5 +77,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ?>
 </div>
 
+</div>
 </body>
 </html>

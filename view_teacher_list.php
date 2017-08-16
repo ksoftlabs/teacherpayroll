@@ -7,11 +7,13 @@
  */
 
 include "functions.php";
+include "access_control.php";
+include "header.php";
+
+
+echo "<div class='column6'>";
+view_teacher_list();
 ?>
-<html>
-    <body>
-    <?php
-        view_teacher_list();
-    ?>
+</div>
     </body>
 </html>

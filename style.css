@@ -67,9 +67,8 @@ ul {
     margin: 0;
     padding: 0;
     background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
+    position: relative;
+    overflow:auto;
 }
 
 li a {
@@ -89,4 +88,13 @@ li a.label{
 
 .text-center{
     text-align: center;
+}
+
+label{
+    padding-right: 10px;
+    display: block;
+}
+
+[type="text"]{
+    display: block;
 }

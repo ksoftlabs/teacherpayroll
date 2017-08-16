@@ -8,6 +8,7 @@
 
 require "connect.php";
 require "functions.php";
+include "access_control.php";
 include "header.php";
 
 $t_id1=$t_id2="";

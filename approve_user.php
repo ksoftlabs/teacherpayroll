@@ -7,6 +7,8 @@
  */
 require "connect.php";
 require "functions.php";
+include "access_control.php";
+include "header.php";
 
 $user_ids="";
 
@@ -21,8 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
-<html>
-<body>
+
+<div class="column6">
 
 <div>
     <h2>Approve Users</h2>
@@ -51,5 +53,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 
+</div>
 </body>
 </html>

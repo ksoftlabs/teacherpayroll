@@ -8,6 +8,7 @@
 
 require "connect.php";
 require "functions.php";
+include "access_control.php";
 include "header.php";
 
 $t_id=$t_name=$t_account=$t_gross="";

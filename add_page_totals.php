@@ -8,6 +8,8 @@
 
 require "connect.php";
 require "functions.php";
+include "access_control.php";
+include "header.php";
 
 $page1=$page2="";
 $errpage1=$errpage2="";
@@ -36,9 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-<html>
 
-<body>
+
+<div class="column6">
 <div class="container">
     <div class="row"><h2>Add Page Totals</h2></div>
 
@@ -64,5 +66,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 </div>
-</body>
+</div>
 </html>

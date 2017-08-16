@@ -6,5 +6,14 @@
  * Time: 8:33 PM
  */
 include "functions.php";
+include "access_control.php";
+include "header.php";
+
+
+echo "<div class='column6'>";
 calculate_deduct_and_net();
 view_all();
+?>
+</div>
+</body>
+</html>

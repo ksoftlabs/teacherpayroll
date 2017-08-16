@@ -37,26 +37,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <html>
 <head>
-
+    <title>Teacher Payroll System</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-    <div class="row"><h2>User Login</h2></div>
+    <div class="row"><h2 class="text-center">User Login</h2></div>
 
     <form  class="column1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
         <div class="row">
             <div class="input-field column1">
-                <input type="text" id="username" name="username" value="<?php echo $u_username;?>">
                 <label for="username">User Name</label>
+                <input type="text" id="username" name="username" value="<?php echo $u_username;?>">
+
                 <span><?php echo $errusername ?></span>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field column1">
-                <input type="password" id="pass" name="pass" value="<?php echo $u_pass;?>">
                 <label for="pass1">Password</label>
+                <input type="password" id="pass" name="pass" value="<?php echo $u_pass;?>">
+
                 <span><?php echo $errpass ;?></span>
             </div>
         </div>
