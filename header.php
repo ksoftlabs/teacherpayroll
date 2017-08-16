@@ -17,7 +17,7 @@
     <h2 class="text-center">Easy Pay</h2>
 </div>
 <div class="row">
-<div class="column4">
+<div class="column5">
 <ul class="addborder">
     <li><a class="label">Operations</a></li>
     <li><a href="add_teacher.php">Add Teacher</a></li>

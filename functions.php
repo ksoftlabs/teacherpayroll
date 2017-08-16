@@ -98,7 +98,7 @@ function add_teacher($id,$name,$account,$gross){
     $sql = "INSERT INTO teacher (t_id,t_name,t_account,t_gross) VALUES ('$id','$name','$account','$gross')";
 
     if (mysqli_query($conn, $sql)) {
-        echo "Teacher Added Successfully";
+        //echo "Teacher Added Successfully";
     } else {
 
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
@@ -112,7 +112,7 @@ function delete_teacher($id){
     $sql = "DELETE FROM teacher WHERE t_id='$id'";
 
     if (mysqli_query($conn, $sql)) {
-        echo "Teacher Deleted Successfully";
+        //echo "Teacher Deleted Successfully";
     } else {
 
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
@@ -205,10 +205,10 @@ function add_smi($id,$amount){
     $sql_update="UPDATE smi SET smi_amount='$amount' WHERE teacher_t_id='$id'";
 
     if (mysqli_query($conn, $sql)) {
-        echo "SMI Deduct Added Successfully";
+       // echo "SMI Deduct Added Successfully";
     }elseif (mysqli_errno($conn)==1062){
         if(mysqli_query($conn, $sql_update)){
-            echo "SMI Deduct Updated Successfully";
+           // echo "SMI Deduct Updated Successfully";
         }else{
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
@@ -225,10 +225,10 @@ function add_gurusetha($id,$amount){
     $sql_update="UPDATE gurusetha SET guru_amount='$amount' WHERE teacher_t_id='$id'";
 
     if (mysqli_query($conn, $sql)) {
-        echo "Gurusetha Deduct Added Successfully";
+        //echo "Gurusetha Deduct Added Successfully";
     }elseif (mysqli_errno($conn)==1062){
         if(mysqli_query($conn, $sql_update)){
-            echo "Gurusetha Deduct Updated Successfully";
+           // echo "Gurusetha Deduct Updated Successfully";
         }else{
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
@@ -245,10 +245,10 @@ function add_rdb($id,$amount){
     $sql_update="UPDATE rdb SET rdb_amount='$amount' WHERE teacher_t_id='$id'";
 
     if (mysqli_query($conn, $sql)) {
-        echo "RDB Deduct Added Successfully";
+        //echo "RDB Deduct Added Successfully";
     }elseif (mysqli_errno($conn)==1062){
         if(mysqli_query($conn, $sql_update)){
-            echo "RDB Deduct Updated Successfully";
+            //echo "RDB Deduct Updated Successfully";
         }else{
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
@@ -266,10 +266,10 @@ function add_stc($id,$amount){
     $sql_update="UPDATE stc SET stc_amount='$amount' WHERE teacher_t_id='$id'";
 
     if (mysqli_query($conn, $sql)) {
-        echo "S.T.C. Deduct Added Successfully";
+        //echo "S.T.C. Deduct Added Successfully";
     }elseif (mysqli_errno($conn)==1062){
         if(mysqli_query($conn, $sql_update)){
-            echo "S.T.C Deduct Updated Successfully";
+            //echo "S.T.C Deduct Updated Successfully";
         }else{
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
@@ -286,7 +286,7 @@ function add_dinapala($id,$amount){
     $sql_update="UPDATE dinapala SET dina_amount='$amount' WHERE teacher_t_id='$id'";
 
     if (mysqli_query($conn, $sql)) {
-        echo "Dinapala Deduct Added Successfully";
+        //echo "Dinapala Deduct Added Successfully";
     }elseif (mysqli_errno($conn)==1062){
         if(mysqli_query($conn, $sql_update)){
             echo "Dinapala Deduct Updated Successfully";
@@ -309,7 +309,7 @@ function add_welfare($ids,$amount){
        $sql_update="UPDATE welfare SET wel_amount='$amount' WHERE teacher_t_id='$id'";
 
        if (mysqli_query($conn, $sql)) {
-           echo "Welfare Deduct Added Successfully";
+           //echo "Welfare Deduct Added Successfully";
        }elseif (mysqli_errno($conn)==1062){
            if(mysqli_query($conn, $sql_update)){
                echo "Welfare Deduct Updated Successfully";
@@ -668,7 +668,7 @@ function create_user($name,$u_username,$password){
     $sql = "INSERT INTO users (user_name,user_username,user_pass,user_type) VALUES ('$name','$u_username','$hash',2)";
 
     if (mysqli_query($conn, $sql)) {
-        echo "User Added Successfully";
+        echo "<span class='text-center' >User Added Successfully</span>";
     } else {
 
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
@@ -828,7 +828,7 @@ function user_login($u_user,$pass){
     }
 
     if($result->num_rows==0){
-        echo "Invalid Username/Password";
+        echo "<span class='text-center'>Invalid Username/Password</span>";
     } else{
         echo "User Logged In";
         $row = $result->fetch_array(MYSQLI_ASSOC);
