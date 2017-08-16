@@ -663,8 +663,9 @@ function view_users(){
 
 function create_user($name,$u_username,$password){
     include "connect.php";
-    $hash=password_hash($password,PASSWORD_DEFAULT);
-    $sql = "INSERT INTO users (user_name,user_username,user_pass,user_type) VALUES ('$name','$u_username','$password',2)";
+    //$hash=password_hash($password,PASSWORD_DEFAULT);
+    $hash=md5($password);
+    $sql = "INSERT INTO users (user_name,user_username,user_pass,user_type) VALUES ('$name','$u_username','$hash',2)";
 
     if (mysqli_query($conn, $sql)) {
         echo "User Added Successfully";
@@ -815,8 +816,9 @@ function calculate_boc_total(){
 function user_login($u_user,$pass){
     require "connect.php";
     //$hashed=password_hash($pass,PASSWORD_DEFAULT);
+    $hashed=md5($pass);
 
-    $sql="SELECT * FROM users WHERE user_name='$u_user' AND user_pass='$pass' AND user_approved=1";
+    $sql="SELECT * FROM users WHERE user_name='$u_user' AND user_pass='$hashed' AND user_approved=1";
 
     if (mysqli_query($conn, $sql)) {
         $result=$conn->query($sql);

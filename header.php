@@ -9,16 +9,16 @@
 ?>
 <html>
 <head>
-    <title>Teacher Payroll System</title>
+    <title>Easy Pay</title>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<div class="column1">
-    <h2 class="text-center">Teacher Payroll System</h2>
+<div class="column1 addborder topbar">
+    <h2 class="text-center">Easy Pay</h2>
 </div>
 <div class="row">
 <div class="column4">
-<ul>
+<ul class="addborder">
     <li><a class="label">Operations</a></li>
     <li><a href="add_teacher.php">Add Teacher</a></li>
     <li><a href="delete_teacher.php">Delete Teacher</a></li>

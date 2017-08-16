@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     </div>
     <div>
-        <p class="text-center">Click <a href='register.php'>here</a> to register.</p>
+        <p class="text-center">Click <a href='register_user.php'>here</a> to register.</p>
     </div>
 
 </div>

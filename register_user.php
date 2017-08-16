@@ -51,48 +51,54 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <html>
 <head>
-
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-    <div class="row"><h2>User Registraion</h2></div>
+    <div class="row text-center"><h2>User Registraion</h2></div>
 
-    <form  class="column1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form  class="column2center text-center" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div class="row">
             <div class="input-field column1">
-                <input type="text" name="name" id="name" value="<?php echo $u_name;?>">
                 <label for="name">Name</label>
+                <input class="display-inline" type="text" name="name" id="name" value="<?php echo $u_name;?>">
+
                 <span><?php echo $errname ?></span>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field column1">
-                <input type="text" id="username" name="username" value="<?php echo $u_username;?>">
                 <label for="username">User Name</label>
+                <input class="display-inline" type="text" id="username" name="username" value="<?php echo $u_username;?>">
+
                 <span><?php echo $errusername ?></span>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field column1">
-                <input type="password" id="pass1" name="pass1" value="<?php echo $u_pass1;?>">
                 <label for="pass1">Password</label>
+                <input type="password" id="pass1" name="pass1" value="<?php echo $u_pass1;?>">
+
                 <span><?php echo $errpass1 ;?></span>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field column1">
-                <input type="password" id="pass2" name="pass2" value="<?php echo $u_pass2;?>">
                 <label for="pass2">Confirm Password</label>
+                <input type="password" id="pass2" name="pass2" value="<?php echo $u_pass2;?>">
+
                 <span><?php echo $errpass2 ;?></span>
             </div>
         </div>
 
         <button class="btn" type="submit" name="submit" value="Submit">Submit</button>
     </form>
-
+    <div>
+        <p class="text-center">Click <a href='login.php'>here</a> to login.</p>
+    </div>
 
 </div>
 <?php
