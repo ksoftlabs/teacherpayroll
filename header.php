@@ -16,6 +16,7 @@
 <div class="column1">
     <h2 class="text-center">Teacher Payroll System</h2>
 </div>
+<div class="row">
 <div class="column4">
 <ul>
     <li><a class="label">Operations</a></li>

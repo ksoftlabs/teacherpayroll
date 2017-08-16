@@ -708,7 +708,7 @@ function view_users(){
 function create_user($name,$u_username,$password){
     include "connect.php";
     $hash=password_hash($password,PASSWORD_DEFAULT);
-    $sql = "INSERT INTO users (user_name,user_username,user_pass) VALUES ('$name','$u_username','$password')";
+    $sql = "INSERT INTO users (user_name,user_username,user_pass,user_type) VALUES ('$name','$u_username','$password',2)";
 
     if (mysqli_query($conn, $sql)) {
         echo "User Added Successfully";
@@ -889,6 +889,7 @@ function user_login($u_user,$pass){
         session_start();
         $_SESSION['userid']=$row['user_id'];
         $_SESSION['usertype']=$row['user_type'];
+        header("location:index.php");
     }
 
 }

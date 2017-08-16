@@ -21,43 +21,56 @@
 .column1{
     margin: auto;
     padding: 10px;
-    float: left;
     width: 100%;
+    position: relative;
+    float: left;
 }
 
 .column2{
     margin: auto;
     padding: 10px;
-    float: left;
     width: 50%;
+    position: relative;
+    float: left;
+}
+
+.column2center{
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    position: relative;
 }
 
 .column3{
     margin: auto;
     padding: 10px;
-    float: left;
     width: 33.33333%;
+    position: relative;
+    float: left;
 }
 
 .column4{
     margin: auto;
     padding: 10px;
-    float: left;
     width: 25%;
+    position: relative;
+    float: left;
 }
 
 .column5{
     margin: auto;
     padding: 10px;
-    float: left;
     width: 20%;
+    position: relative;
+    float: left;
 }
 
 .column6{
     margin: auto;
     padding: 10px;
-    float: left;
     width: 75%;
+    position: relative;
+    float: left;
 }
 
 /*Navigation Bar*/
@@ -97,4 +110,8 @@ label{
 
 [type="text"]{
     display: block;
+}
+
+.display-inline{
+    display: inline;
 }

@@ -7,7 +7,7 @@
  */
 require "connect.php";
 require "functions.php";
-include "access_control.php";
+include "access_control_admin.php";
 include "header.php";
 
 $user_ids="";
