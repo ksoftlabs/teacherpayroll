@@ -6,6 +6,6 @@
  * Time: 2:13 PM
  */
 ?>
-<div class="column6 footer"></div>
+<div class="column1 footer">© www.ksoftlabs.com</div>
 </body>
 </html>
