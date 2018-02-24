@@ -167,8 +167,9 @@ span{
 
 /*Footer*/
 .footer{
-    position: fixed;
-    bottom: 0px;
+    margin-top: 20px;
+    /*position: fixed;*/
+    /*bottom: 0px;*/
     text-align: center;
 }
 

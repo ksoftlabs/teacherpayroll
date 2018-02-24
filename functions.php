@@ -835,7 +835,7 @@ function user_login($u_user,$pass){
         session_start();
         $_SESSION['userid']=$row['user_id'];
         $_SESSION['usertype']=$row['user_type'];
-        header("location:index.php");
+        echo '<script>window.location="index.php"</script>';
     }
 
 }
